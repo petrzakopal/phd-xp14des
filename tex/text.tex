@@ -12,7 +12,7 @@
 \usepackage{graphicx} %enhanced support for craphics%
 %\usepackage{mathptmx} %use Times as default text font, and provide maths support%
 \usepackage{cmap} %mapování znaků - vyhledávání v pdf%
-\usepackage[english]{babel}%CZ%
+\usepackage[czech]{babel}%CZ%
 \usepackage[utf8]{inputenc}%kódování%
 \usepackage[T1]{fontenc}%kódování%
 \usepackage{multirow}%Multirow table support
@@ -78,7 +78,7 @@
 \usepackage{physics}% for derivations \dd
 %this works only when using PDFLaTeX%
 \usepackage[list=true,listformat=simple]{subcaption}
-\usepackage[figurename=Fig.,font=small,labelfont=it,textfont=it]{caption} %for renaming figures instead of renewcommand, small for 11pt default is 10pt as needed in word template
+\usepackage[figurename=Obr.,font=small,labelfont=it,textfont=it]{caption} %for renaming figures instead of renewcommand, small for 11pt default is 10pt as needed in word template
 \usepackage[tablename=Tab.,font=small,labelfont=it,
             textfont=it]{caption} %for renaming tables instead of renewcommand
             
@@ -89,8 +89,8 @@
 \usepackage[nonumberlist,nopostdot,section=subsection,numberedsection]{glossaries}
 % section = subsection is for glossaries title to appear as a subsection, numberedsection adds the subsec number
 
-\newglossary[slg]{symbolslist}{symbol}{ntn1}{List of symbols}
-\newglossary[slg]{abbreviationslist}{abbreviation}{ntn2}{List of abbreviations}
+\newglossary[slg]{symbolslist}{symbol}{ntn1}{Seznam symbolů}
+\newglossary[slg]{abbreviationslist}{abbreviation}{ntn2}{Seznam zkratek}
 
 \makeglossaries
 
@@ -226,7 +226,7 @@
     tabsize=2
 }
 \lstset{style=zakopal}
-\renewcommand{\lstlistingname}{Code}% renaming Listing -> Kód 
+\renewcommand{\lstlistingname}{Kód}% renaming Listing -> Kód 
 \renewcommand{\lstlistlistingname}{List of codes}% renaming List of Listings -> Seznam kódů
 
 \lstdefinelanguage{SCL}
@@ -353,9 +353,9 @@ literate={\{}{{\textcolor{ctured}{\{}}}{1}
 \renewcommand{\cftfigfont}{\fontspec{Times New Roman}}
 \renewcommand{\cfttabfont}{\fontspec{Times New Roman}}
 
-\renewcommand*\contentsname{\textcolor{ctublue}{\MakeTextUppercase{\fontspec{Times New Roman}Table of Contents}}}
-\renewcommand{\listtablename}{{\fontspec{Times New Roman}\textcolor{ctublue}{\MakeTextUppercase{{List of tables}}}}}
-\renewcommand{\listfigurename}{{\fontspec{Times New Roman}\textcolor{ctublue}{\MakeTextUppercase{{List of figures}}}}}
+\renewcommand*\contentsname{\textcolor{ctublue}{\MakeTextUppercase{\fontspec{Times New Roman}Obsah}}}
+\renewcommand{\listtablename}{{\fontspec{Times New Roman}\textcolor{ctublue}{\MakeTextUppercase{{Seznam tabulek}}}}}
+\renewcommand{\listfigurename}{{\fontspec{Times New Roman}\textcolor{ctublue}{\MakeTextUppercase{{Seznam obrázků}}}}}
 
 
 
@@ -370,14 +370,14 @@ literate={\{}{{\textcolor{ctured}{\{}}}{1}
 		\includegraphics[scale=1]{src/misc/symbol_cvut_konturova_verze.pdf}
 	\end{center}
 \end{figure}
-	{\Large{\textbf{CZECH TECHNICAL UNIVERSITY IN PRAGUE}}}\\
-	{\textbf{Faculty of Electrical Engineering}}\\
-	{\textbf{Department of Electric Drives and Traction}}
+	{\Large{\textbf{ČESKÉ VYSOKÉ UČENÍ TECHNICKÉ V~PRAZE}}}\\
+	{\textbf{Fakulta elektrotechnická}}\\
+	{\textbf{Katedra elektrických pohonů a trakce}}
 	
 	\vspace{3cm}
 	
 	
-	{\Large\textbf{Name of the report}}
+	{\Large\textbf{Název dokumentu}}
 	
 	\vspace{1cm}
 	
@@ -385,7 +385,7 @@ literate={\{}{{\textcolor{ctured}{\{}}}{1}
 	
 	%\vspace{2cm}
 	
-	Technical report\\
+	Podnázev dokumentu\\
 	
 	\end{center}
 	
@@ -402,7 +402,7 @@ literate={\{}{{\textcolor{ctured}{\{}}}{1}
 \begin{center}
 
 	\large{\textbf{Petr Zakopal}}\\
-	\large{\textbf{Prague 2023}}
+	\large{\textbf{Praha 2023}}
 	\end{center}
 \end{titlepage}
 
@@ -490,7 +490,7 @@ literate={\{}{{\textcolor{ctured}{\{}}}{1}
 \pagenumbering{arabic}
 \fontspec{Times New Roman}
 
-\section{Rovnice asynchronního motoru}
+\section{Rovnice asynchronního motoru - využívané pro řízení}
 Rovnice pro \gls{abbreviation:asm} je možné odvodit při uvažování následujících zjednodušení:
 
 \begin{itemize}
@@ -521,6 +521,11 @@ Při uvažování uvedených zjednodušení je poté možné psát rovnice
 
     Kde $k$ v horním indexu značí obecný souřadnicový systém, $\underline{u_{1}^{k}}$ (V) značí prostorový vektor napětí statorového vinutí, $\underline{u_{2}^{k}}$ (V) prostorový vektor napětí rotorového vinutí, $\underline{\psi_1^{k}}$ (Wb) prostorový vektor spřaženého magentického toku statorového vinutí, $\underline{\psi_2^{k}}$ (Wb) prostorový vektor spřaženého magnetického toku rotorového vinutí, $R_1$ ($\Omage$) rezistivita statorového vinutí, $R_2$ ($\Omega$) rezistivita rotorového vinutí, $\underline{i_1^{k}}$ (A) prostorový vektor proudu statorového vinutí, $\underline{i_2^{k}}$ (A) prostorový vektor proudu rotorového vinutí, $\omega$ (s$^{-1}$) elektrická úhlová rychlost rotoru, $\omega_\text{s}$ (s$^{-1}$) skluzová rychlost, $\omega_k$ (s$^{-1}$) obecná úhlová rychlost, $L_1$ (H) indukčnost statorového vinutí, $L_2$ (H) indukčnost rotorového vinutí.
 
+    \subsection{Rovnice pro soustavu spojenou se statorovým vinutím}
+    \subsection{Rovnice pro soustavu spojenou s rotorovým vinutím}
+    \subsection{Rovnice pro soustavu spojenou s točivým magnetickým polem}
+
+\section{Rovnice asynchronního motoru - využívané pro modelování}
 
 %závěr
 \newpage
@@ -534,14 +539,14 @@ And this is the conclusion of my report. \gls{symbol:Pn}.
 
 \newpage
 \setmonofont{Times New Roman}
-\printbibliography[title={{References}}]	
+\printbibliography[title={{Literatura}}]	
 \nocite{*}
 \setmonofont{CourierPrime-Regular}
 \addcontentsline{toc}{section}{\numberline{}References} %Added citations to TOC%
 	\appendix
 	\titleformat{\section}{\color{ctublue}\fontspec{Times New Roman}\fontsize{15}{15}\bfseries}{Appendix \thesection:}{2.1em}{}
 	\begin{appendices}
-	\section{List of symbols and abbreviations}
+	\section{Seznam symbolů a zkratek}
 
 		\printglossary[type=abbreviationslist, style = myStyleAbbreviations]
 
