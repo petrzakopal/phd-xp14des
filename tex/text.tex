@@ -377,7 +377,7 @@ literate={\{}{{\textcolor{ctured}{\{}}}{1}
 	\vspace{3cm}
 	
 	
-	{\Large\textbf{Název dokumentu}}
+	{\Large\textbf{Technická zpráva}}
 	
 	\vspace{1cm}
 	
@@ -385,7 +385,7 @@ literate={\{}{{\textcolor{ctured}{\{}}}{1}
 	
 	%\vspace{2cm}
 	
-	Podnázev dokumentu\\
+	1. úloha předmětu XP14DES\\
 	
 	\end{center}
 	
@@ -502,11 +502,12 @@ Rovnice pro \gls{abbreviation:asm} je možné odvodit při uvažování následu
     \item statorová a rotorová vinutí jsou souměrná, tj. činné odpory, indukčnosti a vzájemné indukčnosti jednotlivých fází jsou identické.
 \end{itemize}
 
-Při uvažování uvedených zjednodušení je poté možné psát rovnice
+Při uvažování uvedených zjednodušení je poté možné psát rovnice v obecném souřadnicovém systému $k$
 
  \begin{equation}
      \underline{u_{1}^{k}} = R_1 \underline{i_1^{k}} + \frac{\dd{\underline{\psi_1^{k}}}}{\dd{t}} + \text{j} \omega_k \underline{\psi_1^{k}},
     \end{equation}
+
     \begin{equation}
         \underline{u_{2}^{k}} = R_2 \underline{i_2^{k}} + \frac{\dd{\underline{\psi_2^{k}}}}{\dd{t}} + \text{j} (\omega_k - \omega) \underline{\psi_2^{k}},
     \end{equation}
@@ -519,13 +520,120 @@ Při uvažování uvedených zjednodušení je poté možné psát rovnice
         \underline{\psi_2^{k}} = L_2 \underline{i_2^{k}} + L_\text{m} \underline{i_1^{k}}.
     \end{equation}
 
-    Kde $k$ v horním indexu značí obecný souřadnicový systém, $\underline{u_{1}^{k}}$ (V) značí prostorový vektor napětí statorového vinutí, $\underline{u_{2}^{k}}$ (V) prostorový vektor napětí rotorového vinutí, $\underline{\psi_1^{k}}$ (Wb) prostorový vektor spřaženého magentického toku statorového vinutí, $\underline{\psi_2^{k}}$ (Wb) prostorový vektor spřaženého magnetického toku rotorového vinutí, $R_1$ ($\Omage$) rezistivita statorového vinutí, $R_2$ ($\Omega$) rezistivita rotorového vinutí, $\underline{i_1^{k}}$ (A) prostorový vektor proudu statorového vinutí, $\underline{i_2^{k}}$ (A) prostorový vektor proudu rotorového vinutí, $\omega$ (s$^{-1}$) elektrická úhlová rychlost rotoru, $\omega_\text{s}$ (s$^{-1}$) skluzová rychlost, $\omega_k$ (s$^{-1}$) obecná úhlová rychlost, $L_1$ (H) indukčnost statorového vinutí, $L_2$ (H) indukčnost rotorového vinutí.
+    Kde $k$ v horním indexu značí obecný souřadnicový systém, $\underline{u_{1}^{k}}$ (V) značí prostorový vektor napětí statorového vinutí, $\underline{u_{2}^{k}}$ (V) prostorový vektor napětí rotorového vinutí, $\underline{\psi_1^{k}}$ (Wb) prostorový vektor spřaženého magentického toku statorového vinutí, $\underline{\psi_2^{k}}$ (Wb) prostorový vektor spřaženého magnetického toku rotorového vinutí, $R_1$ ($\Omage$) rezistivita statorového vinutí, $R_2$ ($\Omega$) rezistivita rotorového vinutí, $\underline{i_1^{k}}$ (A) prostorový vektor proudu statorového vinutí, $\underline{i_2^{k}}$ (A) prostorový vektor proudu rotorového vinutí, $\omega$ (s$^{-1}$) elektrická úhlová rychlost rotoru, $\omega_\text{s}$ (s$^{-1}$) skluzová rychlost, $\omega_k$ (s$^{-1}$) obecná úhlová rychlost, $L_1$ (H) indukčnost statorového vinutí, $L_2$ (H) indukčnost rotorového vinutí.\par
+
+    V tomto textu jsou rovnice uvedeny obecně. Ovšem velmi často bývá uvažován \gls{abbreviation:asm} s kotvou nakrátko. Pro jeho model je možné uvažovat $\underline{u_k} = 0$.\par
+
 
     \subsection{Rovnice pro soustavu spojenou se statorovým vinutím}
-    \subsection{Rovnice pro soustavu spojenou s rotorovým vinutím}
-    \subsection{Rovnice pro soustavu spojenou s točivým magnetickým polem}
+    V případě uvažování souřadné soustavy spojené se statorovým vinutím stroje, je možné upravit a zjedodušit rovnice popisující systém dle následujících vztahů. Souřadnicový systém spojený se statorovým vinutím se v literatuře často označuje jako systém $\alpha\beta$. Pro obecnou otáčivou rychlost $\omega_k$ soustavy platí $\omega_k$ = 0.
 
+ \begin{equation}
+     \underline{u_{1}^{\alpha\beta}} = R_1 \underline{i_1^{\alpha\beta}} + \frac{\dd{\underline{\psi_1^{\lpha\beta}}}}{\dd{t}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{u_{2}^{\alpha\beta}} = R_2 \underline{i_2^{\alpha\beta}} + \frac{\dd{\underline{\psi_2^{\alpha\beta}}}}{\dd{t}} - \text{j} \omega \underline{\psi_2^{\alpha\beta}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{\psi_1^{\alpha\beta}} = L_1 \underline{i_1^{\alpha\beta}} + L_\text{m} \underline{i_2^{\alpha\beta}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{\psi_2^{\alpha\beta}} = L_2 \underline{i_2^{\alpha\beta}} + L_\text{m} \underline{i_1^{\alpha\beta}}.
+    \end{equation}
+    \subsection{Rovnice pro soustavu spojenou s rotorovým vinutím}
+    V případě uvažování modelu \gls{abbreviation:asm} v souřadnicovém systému spojeném s rotorovým vinutím platí pro obecnou otáčivou rychlost obecných rovnic $\omega_k = \omega$, kde $\omega$ (s$^{1}$) je elektrická úhlová rychlost otáčení rotoru (rotorového vinutí). Souřadnicový systém je možné označit jako $kl$.\par
+ \begin{equation}
+     \underline{u_{1}^{kl}} = R_1 \underline{i_1^{kl}} + \frac{\dd{\underline{\psi_1^{kl}}}}{\dd{t}} + \text{j} \omega \underline{\psi_1^{k}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{u_{2}^{kl}} = R_2 \underline{i_2^{kl}} + \frac{\dd{\underline{\psi_2^{kl}}}}{\dd{t}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{\psi_1^{kl}} = L_1 \underline{i_1^{kl}} + L_\text{m} \underline{i_2^{kl}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{\psi_2^{kl}} = L_2 \underline{i_2^{kl}} + L_\text{m} \underline{i_1^{kl}}.
+    \end{equation}
+
+    \subsection{Rovnice pro soustavu spojenou s točivým magnetickým polem}
+    Souřadnicový systém spojený s točivým magentickým polem je velmi často označován jako systém $dq$. Pro obecnou úhlovou rychlost platí $\omega_k = \omega_1$, kde $\omega_1$ (s$^{1}$) je elektrická úhlová rychlost točivého magnetického pole statoru, resp. rotoru.
+
+ \begin{equation}
+     \underline{u_{1}^{dq}} = R_1 \underline{i_1^{dq}} + \frac{\dd{\underline{\psi_1^{dq}}}}{\dd{t}} + \text{j} \omega_1 \underline{\psi_1^{dq}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{u_{2}^{dq}} = R_2 \underline{i_2^{dq}} + \frac{\dd{\underline{\psi_2^{dq}}}}{\dd{t}} + \text{j} (\omega_1 - \omega) \underline{\psi_2^{dq}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{\psi_1^{dq}} = L_1 \underline{i_1^{dq}} + L_\text{m} \underline{i_2^{dq}},
+    \end{equation}
+
+    \begin{equation}
+        \underline{\psi_2^{dq}} = L_2 \underline{i_2^{dq}} + L_\text{m} \underline{i_1^{dq}}.
+    \end{equation}
+
+    Velmi často se rozdíl $\omega_1 - \omega$ označuje jako skluzuvá rychlost $\omega_\text{s}$ (s$^{-1}$).
 \section{Rovnice asynchronního motoru - využívané pro modelování}
+Představené rovnice jsou např. vhodné pro modelování stroje při využívání \gls{abbreviation:foc}. Existuje mnoho dalších vyjádření představených rovnic podle toho, co je od modelu očekáváno a jaké veličiny je snadné měřit a které dopočítávat pomocí modelu.\par
+Velmi často se v literatuře objevuje stavový popis modelu stroje s různými stavovými veličinami. V případě již zmiňovaného \gls{abbreviation:foc} se jako stavových proměnných využívá prostorových vektorů proudu statorového vinutí $\underline{i_1}$ např. v souřadnicové soustavě spojené se statorovým vinutím ($\underline{i_1^{\alpha\beta}}$) a spřažených magnetických toků rotorového vinutí $\psi_2$ (opět např. vyjádřených v systému spojeném se statorovým vinutím $\psi_2^{\alpha\beta})$.\par
+V \cite{popescu-induction-motor-modelling-for-vector-control-purposes} jsou uvedeny stavové popisy pro uvedený systém v poměrných jednotkách. Pokud poměrné jednotky nejsou využívány, je možné modely převést na zjednodušené popisy v absolutních jednotkách, jako je tomu např. v \cite{lipcak-bauer-ept-moodle}.\par
+Model implementovaný v prostředí MATLAB je převzat ze stavového popisu uvedeném v \cite{lipcak-bauer-ept-moodle}. Tento stavový popis je uveden v rovnici \ref{eq:state-equations-asm-model-lipcak}. 
+
+\begin{equation}\label{eq:state-equations-asm-model-lipcak}
+    \frac{\dd{}}{\dd{t}}
+    \begin{bmatrix}
+        i_{1\alpha}\\
+        i_{1\beta}\\
+        \psi_{2\alpha}\\
+        \psi_{2\beta}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        -\frac{R_2 L_\text{m}^{2} + L_2^2 R_1}{\sigma L_1 L_2^2} & 0 & \frac{L_\text{m} R_2}{\sigma L_1 L_2^2} & \frac{L_\text{m}}{\sigma L_1 L_2} \omega\\
+        0 & - \frac{R_2 L_\text{m}^2 + L_2^2 R_1}{\sigma L_1 L_2^2} & - \frac{L_\text{m}}{\sigma L_1 L_2} \omega & \frac{L_\text{m} R_2}{\sigma L_1 L_2^2}\\
+        \frac{L_\text{m} R_2}{L_2} & 0 & - \frac{R_2}{L_2} & -\omega\\
+        0 & \frac{L_\text{m} R_2}{L_2} & \omega -\frac{R_2}{L_2}
+    \end{bmatrix}
+    \begin{bmatrix}
+        i_{1\alpha}\\
+        i_{1\beta}\\
+        \psi_{2\alpha}\\
+        \psi_{2\beta}
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        \frac{1}{\sigma L_1} & 0\\
+        0 & \frac{1}{\sigma L_1}\\
+        0 & 0\\
+        0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        u_{1\alpha}\\
+        u_{2\beta}
+    \end{bmatrix}.
+\end{equation}
+
+Stavový popis je vhodné doplnit o~další rovnice, jež budou v~simulaci využity.
+
+\begin{equation}
+    M = \frac{3}{2} p_\text{p} \frac{L_\text{m}}{L_2} (\psi_{2\alpha} i_{1\beta} - \psi_{2\beta} i_{1\alpha}),
+\end{equation}
+
+\begin{equation}
+    M - M_\text{z} = J \frac{\dd{\Omega}}{\dd{t}},
+\end{equation}
+\begin{equation}
+    \omega = p_\text{p} \Omega,
+\end{equation}
+kde $\sigma = 1 - L_\text{m}^{2}/(L_1 L_2)$ (-) je tzv. rozptyl, $i_{1\alpha}$ (A) a $i_{1\beta}$ (A) jsou složky vektoru statorového proudu $\underline{i_1}$ (A), $\psi_{2\alpha}$ (Wb) a $\psi_{2\beta}$ (Wb) jsou složky vektoru rotorového magnetického toku $\underline{\psi_2}$ (Wb), $u_{1\alpha}$ (V) a $u_{1\beta}$ (V) jsou složky statorového napětí $\underline{u_1}$ (V), $p_\text{p}$ (-) je počet polpárů stroje, $\omega$ (s$^{-1}$) je elektrická úhlová rychlost hřídele, $\Omega$ (s$^{-1}$) je mechanická úhlová rychlost hřídele, $M$ je vnitřní elektromechanický moment stroje a $M_\text{z}$ (Nm) je moment zátěžný.
 
 %závěr
 \newpage
