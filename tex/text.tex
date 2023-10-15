@@ -635,6 +635,106 @@ Stavový popis je vhodné doplnit o~další rovnice, jež budou v~simulaci využ
 \end{equation}
 kde $\sigma = 1 - L_\text{m}^{2}/(L_1 L_2)$ (-) je tzv. rozptyl, $i_{1\alpha}$ (A) a $i_{1\beta}$ (A) jsou složky vektoru statorového proudu $\underline{i_1}$ (A), $\psi_{2\alpha}$ (Wb) a $\psi_{2\beta}$ (Wb) jsou složky vektoru rotorového magnetického toku $\underline{\psi_2}$ (Wb), $u_{1\alpha}$ (V) a $u_{1\beta}$ (V) jsou složky statorového napětí $\underline{u_1}$ (V), $p_\text{p}$ (-) je počet polpárů stroje, $\omega$ (s$^{-1}$) je elektrická úhlová rychlost hřídele, $\Omega$ (s$^{-1}$) je mechanická úhlová rychlost hřídele, $M$ je vnitřní elektromechanický moment stroje a $M_\text{z}$ (Nm) je moment zátěžný.
 
+
+\section{Simulované závislosti elektromagnetického momentu na otáčkách stroje}
+    Díky matematickému modelu stroje, vytvořeném v prostředí MATLAB Simulink, je možné vynést charakteristik veličin, které jsou v reálném prostředí neměřitelné. V případě této práce je vynesena závislost elektromagnetického (hnacího) momentu stroje na otáčkách stroje při změně vybraných veličin.\par
+    Vybrané veličiny jsou následující:
+    \begin{itemize}
+            velikost rezistivity rotorového vinutí/kotvy stroje $R_2$ (např. při změně oteplení stroje),
+            velikost rezistivity statorového vinutí $R_1$ (např. při změně oteplení stroje),
+            velikost magnetizační indukčnosti stroje $L_\text{m}$,
+            velikost rozptylové indukčnosti statorového vinutí $L_{1\sigma}$,
+            velikost rozptylové indukčnosti rotorového viutí $L_{2\sigma}$.
+    \end{itemize}
+
+    Model stoje byl vytvořen na základě reálného stroje, umístěného v laboratoři H-26. Vinutí stroje je spojeno do hvězdy.\par
+
+    \begin{minipage}[t]{0.47\textwidth}
+        \vspace{\baselineskip}
+        \begin{table}[H]
+            \caption{Štítkové údaje stroje.}
+            \centering
+                \begin{tabular}{!{\vrule width 2pt} c | c !{\vrule width 2pt}}\noalign{\hrule height 2pt}
+                    $P_\text{n}$ & 12 kW \\ \hline
+                    $U_\text{n}$ & 380 V~\\ \hline
+                    $I_\text{n}$ & 22 A\\ \hline
+                    $n_\text{n}$ & 1460 min$^{-1}$ \\ \hline
+                    $f_\text{n}$ & 50 Hz \\ \hline
+                    $\cos(\varphi_\text{n})$ &  0.8 \\ \hline
+                    $p_\text{p}$ & 2 \\ \noalign{\hrule height 2pt}
+                \end{tabular}     
+            \label{tab:stitkove-udaje}
+        \end{table}
+        \end{minipage}% --- important, otherwise it wont be so nice
+        \hfill
+        \begin{minipage}[t]{0.47\textwidth}
+            \vspace{0pt}
+            \begin{table}[H]
+                \caption{Změřené parametry stroje.}
+                \centering
+                    \begin{tabular}{!{\vrule width 2pt} c | c !{\vrule width 2pt}}\noalign{\hrule height 2pt}
+                        $R_\text{1}$ & 370 m$\Omega$ \\ \hline
+                        $R_\text{2}$ & 225 m$\Omega$ \\ \hline
+                        $L_{1\sigma}$ & 2,27 mH \\ \hline
+                        $L_{2\sigma}$ & 2,27 mH \\ \hline
+                        $L_\text{m}$ & 82,5 mH \\ \hline
+                        $L_{1}$ & 84,77 mH \\ \hline
+                        $L_{2}$ & 84,77 mH \\ \hline $J$ & 0,4 kg$\cdot$m$^{2}$ \\ \noalign{\hrule height 2pt}
+                    \end{tabular}     
+                \label{tab:zmerene-parametry-stroje}
+            \end{table}
+        \end{minipage}
+
+        \vspace*{1cm}
+Kde $P_\text{n}$ (W) je jmenovitý výkon stroje, $I_\text{n}$ (A) je jmenovitý fázový proud stroje (efektivní hodnota), $U_\text{n}$ (V) je jmenovité sdružené napájací napětí stroje, $f_\text{n}$ (Hz) je jmenovitá napájecí frekvence stroje, $\cos(\varphi_\text{n})$ (-) je jmenovitý účinník stroje, $n_\text{n}$ (min$^{-1}$) jsou jmenovité otáčky stroje, $p_\text{p}$ (-) je počet polpárů stroje, $R_1$ ($\Omega$), resp. $R_2$ ($\Omega$) je statorový, resp. rotorový odpor, $L_{1\sigma}$ (H), resp. $L_{2\sigma}$ (H) je statorová, resp. rotorová rozptylová  indukčnost stroje, $L_\text{m}$ (H) je magnetizační indukčnost stroje, $L_1$ (H), resp. $L_2$ (H) je statorová, resp. rotorová indukčnost, $J$ (kg$\cdot$m$^{2}$) je moment setrvačnosti hřídele.\par
+
+
+    \subsection{Změna rezistivity rotorového vinutí}
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/mh_dyn_nGraphR2.png}
+            \caption{Závislost elektromagnetického hnacího momentu $M_\text{h}$ na otáčkách stroje, vynesená při změně rezistivity rotorového viutí o $\pm 10 \%$.}
+            \label{fig:mh_dyn_nGraphR2}
+        \end{figure}
+
+    \fbar
+    \subsection{Změna rezistivity statorového vinutí}
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/mh_dyn_nGraphR1.png}
+            \caption{Závislost elektromagnetického hnacího momentu $M_\text{h}$ na otáčkách stroje, vynesená při změně rezistivity statorového viutí o $\pm 10 \%$.}
+            \label{fig:mh_dyn_nGraphR1}
+        \end{figure}
+
+    \fbar
+    \subsection{Změna magnetizační indukčnosti stroje}
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/mh_dyn_nGraphLm.png}
+            \caption{Závislost elektromagnetického hnacího momentu $M_\text{h}$ na otáčkách stroje, vynesená při změně magnetizační indukčnosti o $\pm 10 \%$.}
+            \label{fig:mh_dyn_nGraphLm}
+        \end{figure}
+
+
+    \fbar
+    \subsection{Změna rozptylové indukčnosti statorového vinutí stroje}
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/mh_dyn_nGraphL1sigma.png}
+            \caption{Závislost elektromagnetického hnacího momentu $M_\text{h}$ na otáčkách stroje, vynesená při změně rozptylové indukčnosti statorového vinutí o $\pm 10 \%$.}
+            \label{fig:mh_dyn_nGraphL1sigma}
+        \end{figure}
+
+    \fbar
+    \subsection{Změna rozptylové indukčnosti rotorového vinutí stroje}
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/mh_dyn_nGraphL2sigma.png}
+            \caption{Závislost elektromagnetického hnacího momentu $M_\text{h}$ na otáčkách stroje, vynesená při změně rozptylové indukčnosti rotorového vinutí o $\pm 10 \%$.}
+            \label{fig:mh_dyn_nGraphL2sigma}
+        \end{figure}
+
+
 %závěr
 \newpage
 \addcontentsline{toc}{section}{\numberline{}Conclusion} 

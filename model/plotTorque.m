@@ -2,7 +2,7 @@ function [] = plotTorque(modelObj,simPrepObj)
 
 
 
-exportActive = false;
+exportActive = true;
 exportFormat = 'png';
 labelsFontSize = 17;
 titleFontSize = 28;
@@ -20,7 +20,7 @@ ctuLightBlue = '#6AADE4';
 ctuOrange = '#E05206';
 
 % R2 change
-graphName = '{\it M}_h = f(n), torque characteristics with the change of rotor rezistance';
+graphName = '{\it M}_h = f({\itn}), závislost při změně velikosti rezistivity rotoru';
 mh_dyn_nGraphR2=figure('color','w','Name',graphName,'NumberTitle','on');
 set(gcf,'Position',[164 139 1244 639])
 hold on;
@@ -35,11 +35,11 @@ title(graphName,'FontName', 'Times New Roman', 'FontSize', titleFontSize, 'Inter
 %ylim([0 180])
 grid on;
 grid minor;
-legend({'{\it R}_2= '+string(simPrepObj(1).Variables(1,2).Value),'{\it R}_2= '+string(simPrepObj(2).Variables(1,2).Value),'{\it R}_2= '+string(simPrepObj(3).Variables(1,2).Value)},'Location', 'northeast')
+legend({'{\it R}_2= '+string(simPrepObj(1).Variables(1,2).Value)+' \Omega','{\it R}_2= '+string(simPrepObj(2).Variables(1,2).Value)+' \Omega','{\it R}_2= '+string(simPrepObj(3).Variables(1,2).Value)+' \Omega'},'Location', 'northeast')
 
 
 % R1 change
-graphName = '{\it M}_h = f(n), torque characteristics with the change of stator rezistance';
+graphName = '{\it M}_h = f({\itn}), závislost při změně velikosti rezistivity statorového vinutí';
 mh_dyn_nGraphR1=figure('color','w','Name',graphName,'NumberTitle','on');
 set(gcf,'Position',[164 139 1244 639])
 hold on;
@@ -54,11 +54,11 @@ title(graphName,'FontName', 'Times New Roman', 'FontSize', titleFontSize, 'Inter
 %ylim([0 180])
 grid on;
 grid minor;
-legend({'{\it R}_1= '+string(simPrepObj(1).Variables(1,1).Value),'{\it R}_1= '+string(simPrepObj(4).Variables(1,1).Value),'{\it R}_1= '+string(simPrepObj(5).Variables(1,1).Value)},'Location', 'northeast')
+legend({'{\it R}_1= '+string(simPrepObj(1).Variables(1,1).Value)+' \Omega','{\it R}_1= '+string(simPrepObj(4).Variables(1,1).Value)+' \Omega','{\it R}_1= '+string(simPrepObj(5).Variables(1,1).Value)+' \Omega'},'Location', 'northeast')
 
 
 % L1sigma change
-graphName = '{\it M}_h = f({\it n}), torque characteristics with the change of stator leakage inductance';
+graphName = '{\it M}_h = f({\itn}), závislost při změně velikosti statorové rozptylové indukčnosti';
 mh_dyn_nGraphL1sigma=figure('color','w','Name',graphName,'NumberTitle','on');
 set(gcf,'Position',[164 139 1244 639])
 hold on;
@@ -73,10 +73,10 @@ title(graphName,'FontName', 'Times New Roman', 'FontSize', titleFontSize, 'Inter
 %ylim([0 180])
 grid on;
 grid minor;
-legend({'{\it L}_{1\sigma}= '+string(simPrepObj(1).Variables(1,3).Value),'{\it L}_{1\sigma}= '+string(simPrepObj(8).Variables(1,3).Value),'{\it L}_{1\sigma}= '+string(simPrepObj(9).Variables(1,3).Value)},'Location', 'northeast')
+legend({'{\it L}_{1\sigma}= '+string(simPrepObj(1).Variables(1,3).Value)+' H','{\it L}_{1\sigma}= '+string(simPrepObj(8).Variables(1,3).Value)+' H','{\it L}_{1\sigma}= '+string(simPrepObj(9).Variables(1,3).Value)+' H'},'Location', 'northeast')
 
 % L2sigma change
-graphName = '{\it M}_h = f({\it n}), torque characteristics with the change of rotor leakage inductance';
+graphName = '{\it M}_h = f({\itn}), závislost při změně velikosti rotorové rozptylové indukčnosti';
 mh_dyn_nGraphL2sigma=figure('color','w','Name',graphName,'NumberTitle','on');
 set(gcf,'Position',[164 139 1244 639])
 hold on;
@@ -91,10 +91,10 @@ title(graphName,'FontName', 'Times New Roman', 'FontSize', titleFontSize, 'Inter
 %ylim([0 180])
 grid on;
 grid minor;
-legend({'{\it L}_{2\sigma}= '+string(simPrepObj(1).Variables(1,4).Value),'{\it L}_{2\sigma}= '+string(simPrepObj(10).Variables(1,4).Value),'{\it L}_{2\sigma}= '+string(simPrepObj(11).Variables(1,4).Value)},'Location', 'northeast')
+legend({'{\it L}_{2\sigma}= '+string(simPrepObj(1).Variables(1,4).Value)+' H','{\it L}_{2\sigma}= '+string(simPrepObj(10).Variables(1,4).Value)+' H','{\it L}_{2\sigma}= '+string(simPrepObj(11).Variables(1,4).Value)+' H'},'Location', 'northeast')
 
 % Lm change
-graphName = '{\it M}_h = f({\it n}), torque characteristics with the change of magnetizing inductance';
+graphName = '{\it M}_h = f({\itn}), závislost při změně velikosti magnetizační indukčnosti';
 mh_dyn_nGraphLm=figure('color','w','Name',graphName,'NumberTitle','on');
 set(gcf,'Position',[164 139 1244 639])
 hold on;
@@ -109,7 +109,7 @@ title(graphName,'FontName', 'Times New Roman', 'FontSize', titleFontSize, 'Inter
 %ylim([0 180])
 grid on;
 grid minor;
-legend({'{\it L}_{m}= '+string(simPrepObj(1).Variables(1,5).Value),'{\it L}_{m}= '+string(simPrepObj(6).Variables(1,5).Value),'{\it L}_{m}= '+string(simPrepObj(7).Variables(1,5).Value)},'Location', 'northeast')
+legend({'{\it L}_{m}= '+string(simPrepObj(1).Variables(1,5).Value)+' H','{\it L}_{m}= '+string(simPrepObj(6).Variables(1,5).Value)+' H','{\it L}_{m}= '+string(simPrepObj(7).Variables(1,5).Value)+' H'},'Location', 'northeast')
 
 
 % Export Section
