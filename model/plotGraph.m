@@ -4,7 +4,7 @@ function [] = plotGraph(modelObj,simPrepObj,i)
 % Variable exportFormat - set your desired global format for exporting.
 % Did not create graph creating function, because one single edit of color,
 % width etc. would affect other plots, not accepted solution.
-plotActive = true;
+plotActive = false;
 exportActive = false;
 exportFormat = 'png';
 isTiled = true;
