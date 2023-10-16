@@ -520,7 +520,7 @@ Při uvažování uvedených zjednodušení je poté možné vyjádřit rovnice 
         \underline{\psi_2^{k}} = L_2 \underline{i_2^{k}} + L_\text{m} \underline{i_1^{k}}.
     \end{equation}
 
-    Kde $k$ v horním indexu značí obecný souřadnicový systém, \gls{symbol:u1} (V) značí prostorový vektor napětí statorového vinutí, \gls{symbol:u2} (V) prostorový vektor napětí rotorového vinutí, \gls{symbol:psi1} (Wb) prostorový vektor spřaženého magentického toku statorového vinutí, \gls{symbol:psi2} (Wb) prostorový vektor spřaženého magnetického toku rotorového vinutí, \gls{symbol:r1} ($\Omage$) rezistivita statorového vinutí, \gls{symbol:r2} ($\Omega$) rezistivita rotorového vinutí, \gls{symbol:i1} (A) prostorový vektor proudu statorového vinutí, \gls{symbol:i2} (A) prostorový vektor proudu rotorového vinutí, \gls{symbol:omega} (s$^{-1}$) elektrická úhlová rychlost rotoru, \gls{symbol:omegas} (s$^{-1}$) skluzová rychlost, \gls{symbol:omegak} (s$^{-1}$) obecná úhlová rychlost, \gls{symbol:l1} (H) indukčnost statorového vinutí, \gls{symbol:l2} (H) indukčnost rotorového vinutí.\par
+    Kde $k$ v horním indexu značí obecný souřadnicový systém, \gls{symbol:u1} (V) značí prostorový vektor napětí statorového vinutí, \gls{symbol:u2} (V) prostorový vektor napětí rotorového vinutí, \gls{symbol:psi1} (Wb) prostorový vektor spřaženého magentického toku statorového vinutí, \gls{symbol:psi2} (Wb) prostorový vektor spřaženého magnetického toku rotorového vinutí, \gls{symbol:r1} ($\Omega$) rezistivita statorového vinutí, \gls{symbol:r2} ($\Omega$) rezistivita rotorového vinutí, \gls{symbol:i1} (A) prostorový vektor proudu statorového vinutí, \gls{symbol:i2} (A) prostorový vektor proudu rotorového vinutí, \gls{symbol:omega} (s$^{-1}$) elektrická úhlová rychlost rotoru, \gls{symbol:omegas} (s$^{-1}$) skluzová rychlost, \gls{symbol:omegak} (s$^{-1}$) obecná úhlová rychlost, \gls{symbol:l1} (H) indukčnost statorového vinutí, \gls{symbol:l2} (H) indukčnost rotorového vinutí.\par
 
     V tomto textu jsou rovnice uvedeny obecně. Ovšem velmi často bývá uvažován \gls{abbreviation:asm} s kotvou nakrátko. Pro jeho model je možné uvažovat $\underline{u_{2k}} = 0$.\par
 
@@ -544,7 +544,7 @@ Při uvažování uvedených zjednodušení je poté možné vyjádřit rovnice 
         \underline{\psi_2^{\alpha\beta}} = L_2 \underline{i_2^{\alpha\beta}} + L_\text{m} \underline{i_1^{\alpha\beta}}.
     \end{equation}
     \subsection{Rovnice pro soustavu spojenou s rotorovým vinutím}
-    V případě uvažování modelu \gls{abbreviation:asm} v souřadnicovém systému spojeném s rotorovým vinutím platí pro obecnou otáčivou rychlost obecných rovnic $\omega_k = \omega$, kde $\omega$ (s$^{1}$) je elektrická úhlová rychlost otáčení rotoru (rotorového vinutí). Souřadnicový systém je možné označit jako $kl$. Rovnice popisující model v uvedeném souřadnicovém systému jsou označeny \ref{eq:u1kl} až \ref{eq:psi2kl}.\par
+    V případě uvažování modelu \gls{abbreviation:asm} v souřadnicovém systému spojeném s rotorovým vinutím platí pro obecnou otáčivou rychlost obecných rovnic $\omega_k = \omega$, kde $\omega$ (s$^{-1}$) je elektrická úhlová rychlost otáčení rotoru (rotorového vinutí). Souřadnicový systém je možné označit jako $kl$. Rovnice popisující model v uvedeném souřadnicovém systému jsou označeny \ref{eq:u1kl} až \ref{eq:psi2kl}.\par
 
  \begin{equation}\label{eq:u1kl}
      \underline{u_{1}^{kl}} = R_1 \underline{i_1^{kl}} + \frac{\dd{\underline{\psi_1^{kl}}}}{\dd{t}} + \text{j} \omega \underline{\psi_1^{k}},
@@ -563,7 +563,7 @@ Při uvažování uvedených zjednodušení je poté možné vyjádřit rovnice 
     \end{equation}
 
     \subsection{Rovnice pro soustavu spojenou s točivým magnetickým polem}
-    Souřadnicový systém spojený s točivým magnetickým polem je velmi často označován jako systém $dq$. Pro obecnou úhlovou rychlost platí $\omega_k = \omega_1$, kde \gls{symbol:omega1} (s$^{1}$) je elektrická úhlová rychlost točivého magnetického pole statoru, resp. rotoru.  Rovnice popisující model v uvedeném souřadnicovém systému jsou označeny \ref{eq:u1dq} až \ref{eq:psi2dq}.\par
+    Souřadnicový systém spojený s točivým magnetickým polem je velmi často označován jako systém $dq$. Pro obecnou úhlovou rychlost platí $\omega_k = \omega_1$, kde \gls{symbol:omega1} (s$^{-1}$) je elektrická úhlová rychlost točivého magnetického pole statoru, resp. rotoru.  Rovnice popisující model v uvedeném souřadnicovém systému jsou označeny \ref{eq:u1dq} až \ref{eq:psi2dq}.\par
 
  \begin{equation}\label{eq:u1dq}
      \underline{u_{1}^{dq}} = R_1 \underline{i_1^{dq}} + \frac{\dd{\underline{\psi_1^{dq}}}}{\dd{t}} + \text{j} \omega_1 \underline{\psi_1^{dq}},
@@ -694,7 +694,7 @@ Velmi často dochází k porovnání dynamické a statické charakteristiky elek
         \end{minipage}
 
         \vspace*{1cm}
-Kde \gls{symbol:Pn} (W) je jmenovitý výkon stroje, \gls{symbol:In} (A) je jmenovitý fázový proud stroje (efektivní hodnota), \gls{symbol:Un} (V) je jmenovité sdružené napájací napětí stroje, \gls{symbol:fn} (Hz) je jmenovitá napájecí frekvence stroje, \gls{symbol:cosphin} (-) je jmenovitý účinník stroje, \gls{symbol:nn} (min$^{-1}$) jsou jmenovité otáčky stroje, \gls{symbol:pp} (-) je počet polpárů stroje, \gls{symbol:r1} ($\Omega$), resp. \gls{symbol:r2} ($\Omega$) je statorový, resp. rotorový odpor, \gls{symbol:l1sigma} (H), resp. \gls{symbol:l2sigma} (H) je statorová, resp. rotorová rozptylová  indukčnost stroje, \gls{symbol:lm} (H) je magnetizační indukčnost stroje, \gls{symbol:l1} (H), resp. \gls{symbol:l2} (H) je statorová, resp. rotorová indukčnost, \gls{symbol:j} (kg$\cdot$m$^{2}$) je moment setrvačnosti hřídele.\par
+Kde \gls{symbol:Pn} (W) je jmenovitý výkon stroje, \gls{symbol:In} (A) je jmenovitý fázový proud stroje (efektivní hodnota), \gls{symbol:Un} (V) je jmenovité sdružené napájací napětí stroje, \gls{symbol:fn} (Hz) je jmenovitá napájecí frekvence stroje, \gls{symbol:cosphin}~$(-)$ je jmenovitý účinník stroje, \gls{symbol:nn} (min$^{-1}$) jsou jmenovité otáčky stroje, \gls{symbol:pp} $(-)$ je počet polpárů stroje, \gls{symbol:r1}~($\Omega$), resp. \gls{symbol:r2} ($\Omega$) je statorový, resp. rotorový odpor, \gls{symbol:l1sigma} (H), resp. \gls{symbol:l2sigma} (H) je statorová, resp. rotorová rozptylová  indukčnost stroje, \gls{symbol:lm} (H) je magnetizační indukčnost stroje, \gls{symbol:l1} (H), resp. \gls{symbol:l2} (H) je statorová, resp. rotorová indukčnost, \gls{symbol:j} (kg$\cdot$m$^{2}$) je moment setrvačnosti hřídele.\par
 
 \newpage
     \subsection{Změna rezistivity rotorového vinutí}
@@ -751,11 +751,11 @@ Kde \gls{symbol:Pn} (W) je jmenovitý výkon stroje, \gls{symbol:In} (A) je jmen
 \addcontentsline{toc}{section}{\numberline{}Zhodnocení} 
 \section*{Zhodnocení}
 Z představených průběhů závislosti elektromagnetického momentu stroje \gls{symbol:m} na otáčkách $n$ je možné vypozorovat, že největší vliv na změnu průběhu má změna rezistivity rotoru \gls{symbol:r2} a změna rozptylové indukčnosti statorového vinutí \gls{symbol:l1sigma} a rotoru \gls{symbol:l2sigma}.\par
-Při zvýšení rezistivity rotoru je dochází dle teorie k „pokládání“ charakteristiky a zvýšení záběrného momentu stroje. Proto jeden z možných způsobů rozběhu stroje s vinutou kotvou je rozběh se zvýšením rotorovéh odporu. Zvýšení rezistivity může být také zapříčeněno ohřevem stroje.\par
-Změna velikosti rezistivity statorového vinutí se projevuje opačným způsobem, než změna rezistivity rotoru. Při snížení rezistivity vinutí dochází ke zvýšení velikosti elektromagnetického momentu stroje nad hodnotu, než která je pozorována při zadané hodnotě rezistivity. Naopak při zvýšení rezistivity vinutí dochází ke snížení vnitřního elektromagnetického momentu.\par
-Zvýšení rozptylové indukčnosti statorového vinutí a rotoru se opět projevuje opačným způsobem, než změna rezistivity rotoru. Při snížení indukčnosti dochází ke zvýšení hodnoty elektromagnetického momentu při určitých otáčkách stroje. Při zvýšení rozptylové indukčnosti poté ke snížení momentu. Z teoretických předpokladů je zřejmé, že je vyžadována co nejmenší hodnota rozptylového magnetického toku, který se uzavírá cestami, které jsou odlišné od cesty hlavního magnetizačního toku. Simulace tento předpoklad potvrzuje.\par
+Při zvýšení rezistivity rotoru dochází dle teorie k „pokládání“ charakteristiky a zvýšení záběrného momentu stroje. Proto jeden z možných způsobů rozběhu stroje s vinutou kotvou je rozběh se zvýšením rotorového odporu. Zvýšení rezistivity může být také zapříčeněno ohřevem stroje.\par
+Změna velikosti rezistivity statorového vinutí se projevuje opačným způsobem, než změna rezistivity rotoru. Při snížení rezistivity vinutí dochází ke zvýšení velikosti elektromagnetického momentu stroje nad hodnotu, než která je pozorována při původní měřené hodnotě rezistivity. Naopak při zvýšení rezistivity vinutí dochází ke snížení vnitřního elektromagnetického momentu.\par
+Zvýšení rozptylové indukčnosti statorového vinutí a rotoru se opět projevuje opačným způsobem, než změna rezistivity rotoru. Při snížení indukčnosti dochází ke zvýšení hodnoty elektromagnetického momentu při určitých otáčkách stroje. Při zvýšení rozptylové indukčnosti ke snížení momentu. Z teoretických předpokladů je zřejmé, že je vyžadována co nejmenší hodnota rozptylového magnetického toku, který se uzavírá cestami, které jsou odlišné od cesty hlavního magnetizačního toku. Simulace tento předpoklad potvrzuje.\par
 Změna magnetizační indukčnosti \gls{symbol:lm} prakticky nemá vliv na představenou závislost elektromagnetického momentu.\par
-Pozorované změny odpovídají teoretickým předpokladům o změně statické charakteristiky vnitřního elektromagnetického stroje na otáčkách a je je tudíž možné aplikovat i na dynamickou závislost elektromagnetického momentu stroje.
+Pozorované změny odpovídají teoretickým předpokladům o změně statické charakteristiky vnitřního elektromagnetického momentu stroje na otáčkách a je je tudíž možné aplikovat i na dynamickou závislost elektromagnetického momentu.
 
 \flushbottom %vyčištění stránky
 
