@@ -502,7 +502,7 @@ Rovnice pro \gls{abbreviation:asm} je možné odvodit při uvažování následu
     \item statorová a rotorová vinutí jsou souměrná, tj. činné odpory, indukčnosti a vzájemné indukčnosti jednotlivých fází jsou identické.
 \end{itemize}
 
-Při uvažování uvedených zjednodušení je poté možné vyjádřit rovnice matematického modelu stroje v~obecném souřadnicovém systému $k$ (s využitím prostorových vektorů).
+Při uvažování uvedených zjednodušení je poté možné vyjádřit rovnice matematického modelu stroje v~obecném souřadnicovém systému $k$ (s~využitím prostorových vektorů).
 
  \begin{equation}
      \underline{u_{1}^{k}} = R_1 \underline{i_1^{k}} + \frac{\dd{\underline{\psi_1^{k}}}}{\dd{t}} + \text{j} \omega_k \underline{\psi_1^{k}},
@@ -585,7 +585,7 @@ Při uvažování uvedených zjednodušení je poté možné vyjádřit rovnice 
 \section{Rovnice asynchronního motoru - využívané pro modelování}
 Představené rovnice jsou vhodné např. pro modelování stroje při využívání vektorového řízení, orientovaného na rotorový tok (Field Oriented Control, \gls{abbreviation:foc}). Existuje mnoho dalších vyjádření představených rovnic podle toho, co je od modelu očekáváno a jaké veličiny je snadné měřit a které je snadnější dopočítávat pomocí modelu.\par
 Velmi často se v~literatuře objevuje stavový popis modelu stroje s~různými stavovými veličinami. V~případě již zmiňovaného \gls{abbreviation:foc} se jako stavových proměnných využívá prostorových vektorů proudu statorového vinutí $\underline{i_1}^k$ např. v~souřadnicové soustavě spojené se statorovým vinutím ($\underline{i_1^{\alpha\beta}}$) a spřažených magnetických toků rotorového vinutí \gls{symbol:psi2} (opět např. vyjádřených v~systému spojeném se statorovým vinutím $\psi_2^{\alpha\beta})$.\par
-V~\cite{popescu-induction-motor-modelling-for-vector-control-purposes} jsou uvedeny stavové popisy pro představený systém v souřadnicích $\alpha\beta$ v~poměrných jednotkách. Pokud poměrné jednotky nejsou využívány, je možné modely převést na zjednodušené popisy v~absolutních jednotkách, jako je tomu např. v~\cite{lipcak-bauer-ept-moodle}.\par
+V~\cite{popescu-induction-motor-modelling-for-vector-control-purposes} jsou uvedeny stavové popisy pro představený systém v~souřadnicích $\alpha\beta$ v~poměrných jednotkách. Pokud poměrné jednotky nejsou využívány, je možné modely převést na zjednodušené popisy v~absolutních jednotkách, jako je tomu např. v~\cite{lipcak-bauer-ept-moodle}.\par
 Model implementovaný v~prostředí MATLAB je převzat ze stavového popisu uvedeného v~\cite{lipcak-bauer-ept-moodle}. Tento stavový popis je uveden v~rovnici \ref{eq:state-equations-asm-model-lipcak}. 
 
 \begin{equation}\label{eq:state-equations-asm-model-lipcak}
@@ -753,11 +753,11 @@ Kde \gls{symbol:Pn} (W) je jmenovitý výkon stroje, \gls{symbol:In} (A) je jmen
 \addcontentsline{toc}{section}{\numberline{}Zhodnocení} 
 \section*{Zhodnocení}
 Z~představených průběhů závislosti elektromechanického momentu stroje \gls{symbol:m} na otáčkách $n$ je možné vypozorovat, že největší vliv na změnu průběhu má změna rezistivity rotoru \gls{symbol:r2} a změna rozptylové indukčnosti statorového vinutí \gls{symbol:l1sigma} a rotoru \gls{symbol:l2sigma}.\par
-Při zvýšení rezistivity rotoru dochází dle teorie k~„pokládání“ charakteristiky a zvýšení záběrného momentu stroje. Proto jeden z~možných způsobů rozběhu stroje s~vinutou kotvou je rozběh se zvýšením rotorového odporu. Zvýšení rezistivity může být v reálném stroji zapříčeněno ohřevem rotoru stroje.\par
+Při zvýšení rezistivity rotoru dochází dle teorie k~„pokládání“ charakteristiky a zvýšení záběrného momentu stroje. Proto jeden z~možných způsobů rozběhu stroje s~vinutou kotvou je rozběh se zvýšením rotorového odporu. Zvýšení rezistivity může být v~reálném stroji zapříčeněno ohřevem rotoru stroje.\par
 Změna velikosti rezistivity statorového vinutí se projevuje opačným způsobem, než změna rezistivity rotoru. Při snížení rezistivity vinutí dochází ke zvýšení velikosti elektromechanického momentu stroje nad hodnotu, než která je pozorována při původní měřené hodnotě rezistivity. Naopak při zvýšení rezistivity vinutí dochází ke snížení elektromechanického momentu.\par
 Zvýšení rozptylové indukčnosti statorového vinutí a rotoru se také projevuje opačným způsobem, než změna rezistivity rotoru. Při snížení indukčnosti dochází ke zvýšení hodnoty elektromechanického momentu při určitých otáčkách stroje. Při zvýšení rozptylové indukčnosti ke snížení momentu. Z~teoretických předpokladů je zřejmé, že je vyžadována co nejmenší hodnota rozptylového magnetického toku, který se uzavírá cestami, které jsou odlišné od cesty hlavního magnetizačního toku. Simulace tento předpoklad potvrzuje.\par
 Změna magnetizační indukčnosti \gls{symbol:lm} prakticky nemá vliv na představenou závislost elektromechanického momentu.\par
-Pozorované změny odpovídají teoretickým předpokladům o~změně statické charakteristiky elektromechanického momentu stroje na otáčkách a je možné tyto předpolady o chování aplikovat i na představený průběh elektromechanického momentu při rozběhu stroje.
+Pozorované změny odpovídají teoretickým předpokladům o~změně statické charakteristiky elektromechanického momentu stroje na otáčkách a je možné tyto předpolady o~chování aplikovat i na představený průběh elektromechanického momentu při rozběhu stroje.
 
 \flushbottom %vyčištění stránky
 
