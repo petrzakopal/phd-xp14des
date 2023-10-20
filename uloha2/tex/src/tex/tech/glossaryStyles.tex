@@ -1,0 +1,38 @@
+\newglossarystyle{myStyleAbbreviations}{
+\renewenvironment{theglossary}%
+     {\begin{longtable}[l]{llp{\glsdescwidth}p{\glspagelistwidth}}}%
+     {\end{longtable}}%
+  \renewcommand*{\glossaryheader}{}%
+  \renewcommand*{\glsgroupheading}[1]{}%
+  \renewcommand{\glossentry}[2]{%
+  \glsentryitem{##1} \glstarget{##1}{##2} &
+    \textbf{\glossentryname{##1}} &
+    \glossentrydesc{##1} &
+    ##2\tabularnewline
+  }%
+  \renewcommand*{\glsgroupskip}{}%  Pokud chci seskupovat podle abeced: \renewcommand*{\glsgroupskip}{ & \\}
+}
+
+
+\newglossarystyle{myStyleSymbols}{
+  \renewenvironment{theglossary}%
+    {\begin{longtable}[l]{llp{\glsdescwidth}p{\glspagelistwidth}}}%
+    {\end{longtable}}%
+  \renewcommand*{\glossaryheader}{}%
+  \renewcommand*{\glsgroupheading}[1]{}%
+  \renewcommand{\glossentry}[2]{%
+    \glsentryitem{##1} \glstarget{##1}{\glossentryname{##1}} &
+    \glossentrysymbol{##1} &
+    \glossentrydesc{##1} &
+    ##2\tabularnewline
+  }%
+  \renewcommand{\subglossentry}[3]{%
+     &
+     \glssubentryitem{##2}%
+     \glossentrysymbol{##2} &
+     \glstarget{##2}{\strut}\glossentrydesc{##2} & ##3\tabularnewline
+  }%
+  \renewcommand*{\glsgroupskip}{%
+   }% Pokud chci seskupovat podel abecedy  \ifglsnogroupskip\else & & &\tabularnewline\fi
+}
+\renewcommand{\glossarypreamble}{\vspace*{-\baselineskip}} % deleting line after glossaries title

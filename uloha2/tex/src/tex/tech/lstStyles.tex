@@ -1,0 +1,107 @@
+% solving problems with ) literal to be coded in lstlisting as it should be
+\makeatletter
+\patchcmd{\lsthk@SelectCharTable}{)}{`}{}{} 
+\makeatother 
+
+\lstdefinestyle{zakopal}{
+    backgroundcolor=\color{codeblue},   
+    commentstyle=\color{codegray},
+    keywordstyle=\color{ctured},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{ctuorange},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=zakopal}
+\renewcommand{\lstlistingname}{Code}% renaming Listing -> Kód 
+\renewcommand{\lstlistlistingname}{List of codes}% renaming List of Listings -> Seznam kódů
+
+\lstdefinelanguage{SCL}
+{morekeywords={FUNCTION_BLOCK,BEGIN,NOT,END_FUNCTION_BLOCK,FUNCTION,VOID,VAR_INPUT,END_VAR,VAR_IN_OUT,IF,
+THEN,END_IF,END_FUNCTION,BOOL,FALSE,TRUE},
+sensitive=false,
+morecomment=[l]{//},
+morestring=[b]",
+literate={;}{{\textcolor{ctuorange}{;}}}{1}
+{:}{{\textcolor{ctuorange}{:}}}{1}
+{)}{{\textcolor{ctuorange}{)}}}{1}
+{(}{{\textcolor{ctuorange}{(}}}{1}
+{=}{{\textcolor{ctuorange}{=}}}{1}
+{,}{{\textcolor{ctuorange}{,}}}{1},} %basic SCL language for siemens defined%
+
+\lstdefinelanguage{xdc}
+{morekeywords={set_property, current_design, get_ports},
+sensitive=false,
+morecomment=[l]{\#}} %basic xdc file in Vivado syntax highlighting%
+
+\lstdefinelanguage{xsct}
+{morekeywords={xsct, hsi, open_hw_design, -createdts, -hw, -zocl, -platform-name, -overlay, -compile, -out, exit, -git-branch},
+alsoletter={-},
+sensitive=false,
+morecomment=[l]{\#}} %xsct (Xilinx Software Command-Line Tools)%
+
+
+\lstdefinelanguage{Text}
+{morekeywords={},
+alsoletter={-},
+sensitive=false,
+morecomment=[l]{//},
+morecomment=[l]{\#}} %basic text%
+
+\lstdefinelanguage{devicetree}
+{morekeywords={chosen, bootargs, stdout-path, compatible, status},
+alsoletter={-},
+stringstyle=\color{ctuorange},
+moredelim=[s][\color{ctuorange}]{"}{"},
+sensitive=false,
+morecomment=[l]{\#},
+literate={\{}{{\textcolor{ctured}{\{}}}{1}
+{\}}{{\textcolor{ctured}{\}}}}{1}
+} %devicetree%
+
+\lstdefinelanguage{json}
+{morekeywords={},
+upquote=true,
+morestring=[b]",
+stringstyle=\color{ctuorange},
+moredelim=[s][\color{ctuorange}]{"}{"},
+sensitive=false,
+morecomment=[l]{\#},
+literate=
+     *{0}{{{\color{ctured}0}}}{1}
+      {1}{{{\color{ctured}1}}}{1}
+      {2}{{{\color{ctured}2}}}{1}
+      {3}{{{\color{ctured}3}}}{1}
+      {4}{{{\color{ctured}4}}}{1}
+      {5}{{{\color{ctured}5}}}{1}
+      {6}{{{\color{ctured}6}}}{1}
+      {7}{{{\color{ctured}7}}}{1}
+      {8}{{{\color{ctured}8}}}{1}
+      {9}{{{\color{ctured}9}}}{1}
+      {\{}{{{\color{ctured}{\{}}}}{1}
+      {\}}{{{\color{ctured}{\}}}}}{1}
+      {[}{{{\color{ctured}{[}}}}{1}
+      {]}{{{\color{ctured}{]}}}}{1},
+} %json%
+
+\lstdefinelanguage{pseudocode}
+{morekeywords={if, else, positive, negative, edge, end},
+alsoletter={-},
+stringstyle=\color{ctuorange},
+moredelim=[s][\color{ctuorange}]{"}{"},
+sensitive=false,
+morecomment=[l]{\//},
+literate={\{}{{\textcolor{ctured}{\{}}}{1}
+{\}}{{\textcolor{ctured}{\}}}}{1}
+{(}{{{\color{ctured}{(}}}}{1}
+{)}{{{\color{ctured}{)}}}}{1}
+} %devicetree%
