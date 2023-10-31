@@ -27,3 +27,5 @@
 *.glg
 *.gls
 *.abbreviation
+
+*/articles/*
