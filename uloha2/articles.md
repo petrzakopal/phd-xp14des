@@ -31,3 +31,7 @@
 - [Performance Review of Permanent Magnet assisted Synchronous Reluctance Traction Motor Designs](https://ieeexplore.ieee.org/document/8558230)
 - [Performance of PM-assisted synchronous reluctance motor for high-efficiency and wide constant-power operation](https://ieeexplore.ieee.org/document/952497) - cited a lot
 - [Analytical harmonic current model for a Permanent Magnet Assisted Synchronous Reluctance Motor (PMa-SynRM) fed by PWM inverter](https://ieeexplore.ieee.org/document/9215958)
+
+
+## The Whole Design Thesis
+- [Design of a Permanent-Magnet Assisted Synchronous Reluctance Machine for a Plug-In Hybrid Electric Vehicle](https://www.diva-portal.org/smash/get/diva2:462259/FULLTEXT01.pdf)
