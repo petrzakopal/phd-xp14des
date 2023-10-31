@@ -14,6 +14,7 @@
 - [Comparison Between A Three Level Inverter Synchronous Reluctance Machine and A Permanent Magnet Assisted Synchronous Reluctance Machine Drives](https://ieeexplore.ieee.org/document/10057903)
 - [Synchronous motors for traction applications](https://ieeexplore.ieee.org/document/7993210)
 
+
 ## Control
 - [Using Extended Kalman Filter and Adaptive Filter for sensorles predictive torque control of PM-Assissted Synchronous Reluctance Motor](https://ieeexplore.ieee.org/document/7556839)
 - [Online Parameter Estimation of Permanent-Magnet Assisted Synchronous Reluctance Motor](https://ieeexplore.ieee.org/document/4132882)
@@ -24,6 +25,8 @@
 - [Position-sensorless control of permanent-magnet-assisted synchronous reluctance motor](https://ieeexplore.ieee.org/document/1278642) - cited a lot
 
 ## Something else
+- [Study on Line-Start Permanent Magnet Assistance Synchronous Reluctance Motor for Improving Efficiency and Power Factor](https://www.mdpi.com/1996-1073/13/2/384)
+- [Performance Analysis of Synchronous Reluctance Motor with Limited Amount of Permanent Magnet](https://www.mdpi.com/1996-1073/12/18/3504)
 - [Sensitivity Analysis and Design of a High Performance Permanent-Magnet-Assisted Synchronous Reluctance Motor for EV Application](https://ieeexplore.ieee.org/document/8450176)
 - [Performance Review of Permanent Magnet assisted Synchronous Reluctance Traction Motor Designs](https://ieeexplore.ieee.org/document/8558230)
 - [Performance of PM-assisted synchronous reluctance motor for high-efficiency and wide constant-power operation](https://ieeexplore.ieee.org/document/952497) - cited a lot
