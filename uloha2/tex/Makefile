@@ -7,3 +7,7 @@ glossaries: text.tex ./src/glossaries/abbreviations.tex ./src/glossaries/symbols
 
 citations: text.tex ./src/bib/zdroje.bib
 	biber text.bcf
+
+clean:
+	rm -rf *.aux *.bbl *.log *.nav *.snm *.out *.synctex.gz *.toc *.fls *.run.xml *.fdb_latexmk *.blg *-blx.bib *.bcf *.blg *.glo *.ist *.lof *.log *.lot *.ntn* *.slg *.symbol *.glg *.gls *.abbreviation
+
