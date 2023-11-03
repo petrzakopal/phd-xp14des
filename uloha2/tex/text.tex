@@ -331,8 +331,49 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
         where $\omega_1$ (rad $\text{s}^{-1}$) is electrical angular speed of a stator rotating magnetic field. When the equation is denoted in vector components and the subscript "1" for stator is omitted and the axis are newly denoted by the variables subscript
 
         \begin{equation}
-            \underline{u}_d
+            \underline{u}_d = \text{R}_\text{s} i_\text{d} + \frac{\dd \psi_d}{\dd t} - \omega_1\psi_q,
         \end{equation}
+        \begin{equation}
+            \underline{u}_q = \text{R}_\text{s} i_\text{q} + \frac{\dd \psi_q}{\dd t} + \omega_1\psi_d.
+        \end{equation}
+
+        Equations for flux linkeages denoted in the $d,q$-axis, when \gls{abbreviation:pm}s are embedded along the $q$-axis are
+
+        \begin{equation}\label{eq:d-axis-flux-linkeage}
+            \psi_d = \text{L}_d i_\text{d},
+        \end{equation}
+
+        \begin{equation}\label{eq:q-axis-flux-linkeage-general}
+            \psi_q = \text{L}_q i_\text{q} + \psi_\text{PM}.
+        \end{equation}
+
+        Where $\text{L}_q$ (H), $\text{L}_d$ (H) are inductances in $d$-axis and $q$-axis respectively, $\psi_\text{PM}$ (Wb) is a flux linkeage of permanent magnets. Very often the \gls{abbreviation:pm} flux linkeage is oriented negatively in the $q$-axis when respecting the vector orientation the equation \ref{eq:q-axis-flux-linkeage-general} can be rewritten as
+
+        \begin{equation}\label{eq:q-axis-flux-linkeage-rewritten}
+            \psi_q = \text{L}_q i_\text{q} - \psi_\text{PM}.
+        \end{equation}
+        
+        The general equation for electromagentic torque is then
+
+        \begin{equation}\label{eq:torque-general}
+            \begin{gathered}
+                T = \frac{3}{2} \text{p}_\text{p} | \underline{\psi_{dq}} \times \underline{i_{dq}} | = \frac{3}{2} \text{p}_\text{p} (\psi_d i_q - \psi_q i_d).
+            \end{gathered}
+        \end{equation}
+
+        where $\text{p}_\text{p}$ (-) is number of pole pairs.\par
+
+        After the substituion of \ref{eq:d-axis-flux-linkeage} and \ref{eq:q-axis-flux-linkeage-rewritten} to \ref{eq:torque-general} the torque euation may be rewritten
+
+
+        \begin{equation}\label{eq:torque-pmsynrelm}
+            \begin{gathered}
+                M = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - (\text{L}_q i_q -\psi_\text{PM}) i_d) = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - \text{L}_q i_q i_d + \psi_\text{PM} i_d).
+            \end{gathered}
+        \end{equation}
+
+        \par
+        As can be seen from eq. \ref{eq:torque-general}, when the linkeage flux of \gls{abbreviation:pm}s is oriented negatively to the $q$-axis (as presented), higher value of flux linkeages make the electromagnetic torque higher.
 
     \subsection{Control strategies}
 
