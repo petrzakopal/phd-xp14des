@@ -406,9 +406,11 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
             Vector control strategies became increasingly popular due to the lower cost and higher computational power of available \gls{abbreviation:dsp}s. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}
             \par
             \gls{abbreviation:foc} control mainly uses the theory of space vectors and \gls{abbreviation:dtc} the theory of controlling the electromagnetic torque and magnetic flux based on the desired speed and magnetization. Control strategies are different but objective is the same. The main aim of vector control strategies is to achieve the desired torque and flux values based on the reference values which are set as an input to the control strategy. \cite{heidari-a-review-of-synchronour-relucatence-motor-drive-advancements, dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}
-
-            \\ \noindet \textbf{Maximum Torque Per Ampere (MTPA) \gls{abbreviation:pmsynrelm} control}\par
-
+            
+            \vspace*{1.5cm}
+             \hspace*{-\parindent} \textbf{Maximum Torque Per Ampere (\gls{abbreviation:mtpa}) \gls{abbreviation:pmsynrelm} control}\par
+                \parskip The main objective of the \gls{abbreviation:mtpa} strategy is to achieve the reference (desired) torque with minimum value of stator currents in $d$ and $q$-axis ($i_d$ and $i_q$). According to \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}, there are multiple methods how to realize the \gls{abbreviation:mtpa}.\par
+                The control strategy is parameter dependent. In \cite{niazi-robust-maximum-torque-per-ampere-control-of-pmsynrelm} authors present a robust online parameter estimation technique which improves the control strategy. With calculated and estimated parameters and measured stator currents the torque, which would the machine provide is calculated and then used as a reference value for further calculations. The proposed controller provides increased robustness againts the variations of motor parameters.
 
 \section{Comparation to others}
 
