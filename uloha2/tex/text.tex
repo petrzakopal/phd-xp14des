@@ -430,9 +430,14 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
 
              \vspace*{1cm}
              \textit{2) controling the angle of stator current space vector $i_\text{stator}$}\par
-             \parskip This method forces the space vector of a stator current to be aligned with space vector of a stator electromagnetic force space vector. When the space vectors of a stator voltage and current will coincide the unity power factor will be achieved. \cite{moussa-unity-power-factor-control-of-permanent-magnet-motor-drive-system}
+             \parskip This method forces the space vector of a stator current to be aligned with space vector of a stator electromagnetic force. When the space vectors of a stator voltage and current will coincide the unity power factor will be achieved. \cite{moussa-unity-power-factor-control-of-permanent-magnet-motor-drive-system}
 
-\section{Comparation to others}
+        \subsubsection{Direct Torque Control}
+            Compared to vector control the \gls{abbreviation:dtc} is in fact simpler. It does not requeire the Pulse Width Modulation (\gls{abbreviation:pwm}). During the sample periode of \gls{abbreviation:dsp} only one space vector of supply voltage is provided as an output from the inverter. The calculation and control is done in the stationary reference frame (eg. stator linked frame in $\alpha \beta$ axis). Hysteresis based \gls{abbreviation:dtc} works on keeping the values of torque and magnetic flux (independently) in the hysteresis band of desired/allowed values. This conrtol needs only a portion of paramaters which are necessary for vector control strategies, thus making the method very convinient. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}
+
+        \subsubsection{Direct Self Control}
+
+\section{Comparation to other types}
 
 \section{Usage}
 
