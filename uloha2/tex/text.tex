@@ -412,6 +412,16 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
                 \parskip The main objective of the \gls{abbreviation:mtpa} strategy is to achieve the reference (desired) torque with minimum value of stator currents in $d$ and $q$-axis ($i_d$ and $i_q$). According to \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}, there are multiple methods how to realize the \gls{abbreviation:mtpa}.\par
                 The control strategy is parameter dependent. In \cite{niazi-robust-maximum-torque-per-ampere-control-of-pmsynrelm} authors present a robust online parameter estimation technique which improves the control strategy. With calculated and estimated parameters and measured stator currents the torque, which would the machine provide is calculated and then used as a reference value for further calculations. The proposed controller provides increased robustness againts the variations of motor parameters.
 
+            \vspace*{1.5cm}
+             \hspace*{-\parindent} \textbf{Maximum Torque Per Voltage (\gls{abbreviation:mtpv}) \gls{abbreviation:pmsynrelm} control}\par
+                \parskip The higher the speed of rotor, the larger the magnitude of the back electromotive force (\gls{abbreviation:emf}), the larger magnitude of voltage provided from source is needed. When speed reaches the value, where nominal source voltage is reached, then the current flowing through stator wires must decrease due to the back \gls{abbreviation:emf}. Thus the voltage value restricts the current based on the rotor speed. In \cite{sanz-analitical-maximum-torque-per-volt-control-strategu-of-an-interior-permanent-magnet-synchronous-motor-with-very-low-battery-voltage} the exemplar curves presenting \gls{abbreviation:mtpv} are depicted. Another mathematical expression of the \gls{abbreviation:mtpv} trajectoriy is presented in \cite{fletcher-operation-along-the-maximum-torque-per-voltage-trajectory-in-a-direct-torque-and-flux-controlled-interior-permament-magnet-synchronous-motor}. Cited paper also depicts the exemplar trajectories in the $i_d$-$i_q$ plane.
+                \par
+                The \gls{abbreviation:mtpv} trajectories are plotted based on the current values in $i_d$-$i_q$, where the possible torque is at the peak. The maximum torque value in the diagram is based on the operation speed.
+
+
+            \vspace*{1.5cm}
+             \hspace*{-\parindent} \textbf{Unity Power Factor Control (\gls{abbreviation:upfc})}\par
+
 \section{Comparation to others}
 
 \section{Usage}
