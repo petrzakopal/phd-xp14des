@@ -373,9 +373,44 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
         \end{equation}
 
         \par
-        As can be seen from eq. \ref{eq:torque-general}, when the linkeage flux of \gls{abbreviation:pm}s is oriented negatively to the $q$-axis (as presented), higher value of flux linkeages make the electromagnetic torque higher.
+        As can be seen from eq. \ref{eq:torque-general}, when the linkeage flux of \gls{abbreviation:pm}s is oriented negatively to the $q$-axis (as presented), higher value of flux linkeages make the electromagnetic torque higher.\par
+        
+        Graphical expression of the phasor diagram for the \gls{abbreviation:synrelm} is depicted in the figure \ref{fig:cad-pmasynrm-vector-diagram}.
+        
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=0.70\textwidth]{src/pdf/cad-pmasynrm-vector-diagram.pdf}
+            \caption{Phasor diagram for the \gls{abbreviation:synrelm} when the flux of permanent magnets $\psi_\text{m}$ is oriented in the negative $q$-axis direction.}
+            \label{fig:cad-pmasynrm-vector-diagram}
+        \end{figure}
+    
+    \par
+    Effect of different layers of \gls{abbreviation:pm} in rotor on realized the phasor diagram may be observed in \cite{huynh-design-and-analysis-of-perm-as-synch-rel-m}.
 
     \subsection{Control strategies}
+
+        There are many options on how to control the \gls{abbreviation:pmsynrelm}. The principles may be divided in two major groups: \textbf{Scalar Control} and \textbf{Vector Control}. The two major subcategories of vector control strategies are \textbf{Field Oriented Control} (\gls{abbreviation:foc}) and \textbf{Direct Torque Control} (\gls{abbreviation:dtc}). These strategies then may use different aproaches to achieve the desired results of less torque ripple and dynamic performance. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive} The general group decopmosition is depicted in the figure \ref{fig:pmsynrelm-control-strategies}.
+
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=0.70\textwidth]{src/png/pmsynrelm-control-strategies.png}
+            \caption{General diagram depicting major groups of control strategies for \gls{abbreviation:pmsynrelm}. Graph inspired by \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}}
+            \label{fig:pmsynrelm-control-strategies}
+        \end{figure}
+
+        \subsubsection{Scalar Control}
+            Scalar drive control is straighforward solution for controlling the drive. It is relatively simple to execute and there is no need of a high performance Digital Signal Processors (\gls{abbreviation:dsp}s). However Scalar Control can not provide the dynamic performance and speed control compared to \gls{abbreviation:foc} and \gls{abbreviation:dtc}. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}\par
+            Scalar control is mainly known as a $V$/$f$ (Voltage/frequency) control. The control methods mainly produce output voltage so the ratio between voltage and frequency is kept constant for the magnetizing flux to be the highest possible, so the torque is possibly maximized as well. Another methods use $I$/$f$ (current/frequency) control based strategies. \cite{heidari-a-review-of-synchronour-relucatence-motor-drive-advancements}
+
+        \subsubsection{Vector Control}
+            Vector control strategies became increasingly popular due to the lower cost and higher computational power of available \gls{abbreviation:dsp}s. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}
+            \par
+            \gls{abbreviation:foc} control mainly uses the theory of space vectors and \gls{abbreviation:dtc} the theory of controlling the electromagnetic torque and magnetic flux based on the desired speed and magnetization. Control strategies are different but objective is the same. The main aim of vector control strategies is to achieve the desired torque and flux values based on the reference values which are set as an input to the control strategy. \cite{heidari-a-review-of-synchronour-relucatence-motor-drive-advancements, dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}
+            
+            \vspace*{1.5cm}
+             \hspace*{-\parindent} \textbf{Maximum Torque Per Ampere (\gls{abbreviation:mtpa}) \gls{abbreviation:pmsynrelm} control}\par
+                \parskip The main objective of the \gls{abbreviation:mtpa} strategy is to achieve the reference (desired) torque with minimum value of stator currents in $d$ and $q$-axis ($i_d$ and $i_q$). According to \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}, there are multiple methods how to realize the \gls{abbreviation:mtpa}.\par
+                The control strategy is parameter dependent. In \cite{niazi-robust-maximum-torque-per-ampere-control-of-pmsynrelm} authors present a robust online parameter estimation technique which improves the control strategy. With calculated and estimated parameters and measured stator currents the torque, which would the machine provide is calculated and then used as a reference value for further calculations. The proposed controller provides increased robustness againts the variations of motor parameters.
 
 \section{Comparation to others}
 
