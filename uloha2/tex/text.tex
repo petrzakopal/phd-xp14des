@@ -18,7 +18,7 @@
 \usepackage{multirow} % Multirow table support
 \usepackage{float} % Improves the interface for defining floating objects such as figures and tables
 \usepackage{wasysym} % for various glyphs, symbols
-
+\usepackage{subcaption}
 \usepackage{setspace} % spacing
 \onehalfspacing
 
@@ -117,7 +117,7 @@
  
 \usepackage{titlesec} % for spacing text after sections
 \usepackage{parskip}[] % for working \parskip
-\newcommand{\sectionbreak}{\clearpage} % maybe for SECTIONS on a new page
+%\newcommand{\sectionbreak}{\clearpage} % maybe for SECTIONS on a new page
 
 \usepackage[titletoc]{appendix} % For appendix - přílohy, titletoc is crucial
 %\renewcommand{\appendixname}{Příloha}
@@ -256,10 +256,10 @@
 \newpage
 
 %% LIST OF TABLES %%
-\listoftables
-\flushbottom
+%\listoftables
+%\flushbottom
 
-\newpage
+%\newpage
 
 
 %% BLANK PAGE AFTER TOC, TOF, TOT %%
@@ -271,12 +271,14 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-\gls{symbol:Pn} \gls{abbreviation:asm}
+This short report paper presents the most important information about Permanent Magnet Assisted Reluctance Motors (\gls{abbreviation:pmsynrelm}). The topics discussed in this paper could be extended but the brief paper would loose it's clearance.\par
+The references used in this paper were selected based on the rating, relevance and the publication date to reflect modern trends in the field as much as was possible. Some principles for controlling the machines were developed in much earlier publications when the \gls{abbreviation:pmsynrelm} were not popular, but the principle developed for earlier machine desings still work today.\par
+This paper is organized as follows: Firstly the most used design of the stator and rotor with permanent magnets is presented. Then the general mathematical model used for controlling the machine with corresponding control strategies used for controlling the \gls{abbreviation:pmsynrelm} and other permanent magnet machines are briefly explained. The next section is dedicated to comparing the \gls{abbreviation:pmsynrelm} to other popular motor structures used in the automotive and traction field. The paper ends with section briefly presenting the latest research interests in the field of \gls{abbreviation:pmsynrelm} drives.
 
 \section{Design}
 The Permanent Magnet assisted synchronous reluctance motor (\gls{abbreviation:pmsynrelm}) is widely used for it's significant advantages of small size, low loss, high efficiency, better performance than plain synchronous reluctance motors \gls{abbreviation:synrelm} and wide constant power to speed range. \cite{xinmin-design-of-permanent-magnet-assisted-synch-rel-m-with-low-torque-ripple,huynh-design-and-analysis-of-perm-as-synch-rel-m}
     \subsection{Stator and Rotor}
-        There are many solutions on how to connect the stator winding. Research has been carried out for standard Delta or Start winding, but to increase the torque for same stator current the combined Start-Delta winding was proposed. The first research has been caried out for standard \gls{abbreviation:synrelm} in \cite{ibrahim-an-improved-torque-density-synchronous-reluctance-machine-with-a-combined-star-delta-winding-layout} and then extended to \gls{abbreviation:pmsynrelm} prototypes in \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons}. The main idea of the hybrid Delta-Star connection is to split the standard phase wiring into two parts. The one part is for the Delta connection, the other for Star connection. Then the coils of wiring are connnected to series. Motors utilizing hybrid stator winding with \gls{abbreviation:pm}s inserted in the rotor flux bariers exhibit constant power factor over 0.9\cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons}
+        There are many solutions on how to connect the stator winding. Research has been carried out for standard Delta or Start winding, but to increase the torque for same stator current the combined Start-Delta winding was proposed. The first research has been caried out for standard \gls{abbreviation:synrelm} in \cite{ibrahim-an-improved-torque-density-synchronous-reluctance-machine-with-a-combined-star-delta-winding-layout} and then extended to \gls{abbreviation:pmsynrelm} prototypes in \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons}. The main idea of the hybrid Delta-Star connection is to split the standard phase wiring into two parts. The one part is for the Delta connection, the other for Star connection. Then the coils of wiring are connnected to series. Motors utilizing hybrid stator winding with \gls{abbreviation:pm}s inserted in the rotor flux bariers exhibit constant power factor over 0.9. \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons}
 
         \begin{figure}[htbp!]
             \centering
@@ -288,16 +290,25 @@ The Permanent Magnet assisted synchronous reluctance motor (\gls{abbreviation:pm
         In \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons} the authors manufactured proposed four prototypes. The prototypes consist of two stators, with either conventional star winding or hybrid star-delta winding, and two rotors, with ferrite permanent magnets or without. Maxwell transient simulations were carried out on the four prototypes, which were then manufactured and experiment using the simulation results was conducted.
 \par
     According to \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons} the researches state, that when using the hybrid stator winding connection, the efficiency increase is rather low compared to efficiency increase when comparing \gls{abbreviation:synrelm} with and without \gls{abbreviation:pm}s.\par
-    The design of the \gls{abbreviation:pmsynrelm} rotor with \gls{abbreviation:pm} oriented solely in the $q$-axis is depicted in the figure \ref{fig:pmsynrelm-rotor-magnets-q-axis}.
+    The design of the \gls{abbreviation:pmsynrelm} rotor with \gls{abbreviation:pm} oriented solely in the $q$-axis is depicted in the figure \ref{fig:pmsynrelm-rotor-magnets-q-axis}. The proces of inserting the permanent magnets to the flux barriers in the rotor is depicted in Fig. \ref{fig:pm-inserted}.
     
-    \begin{figure}[htbp!]
+
+\begin{figure}[H]
+    \begin{subfigure}{0.4\textwidth}
             \centering
-            \includegraphics[width=0.5\textwidth]{src/png/pmsynrelm-rotor-magnets-q-axis.png}
+            \includegraphics[width=1\textwidth]{src/png/pmsynrelm-rotor-magnets-q-axis.png}
             \caption{Rotor design of a Permanent Magnet Assisted Synchronous Reluctance Motor with permanent magnets oriented solely in the $q$-axis. \cite{tavernini-design-and-optimisation-of-energy-efficient-pmsynrelm-for-electric-vehicles}}
             \label{fig:pmsynrelm-rotor-magnets-q-axis}
-    \end{figure}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}{0.4\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/pm-inserted.png}
+            \caption{Process of inserting the permanent magnets to the rotor of a Permanent Magnet Assisted Synchronous Reluctance Motor. \cite{wang-synchronous-motors-for-traction-applications}}
+            \label{fig:pm-inserted}
+    \end{subfigure}
 
-
+\end{figure}
 
     \subsection{Magnets}
         \gls{abbreviation:pmsynrelm} are very often compared to Permanent Magnet Synchronous Motors (\gls{abbreviation:pmsm}) used in the automotive field in terms of power and torque density, efficiency and costs. Though the \gls{abbreviation:pmsm} are very popular \cite{morimoto-experimental-evaulation-of-a-rare-earth-free-pmasynrm-with-ferrite-magnets-for-automotive-applications}, the \gls{abbreviation:pm}s used in their design often consist of rare-earth materials such as neodymium or dysprosium. That is the reason why \gls{abbreviation:pmsynrelm} motors with rare-earth-free materials are now being the subject of many research studies. Experiments comparing the production-used \gls{abbreviation:pmsm} and experimental prototype \gls{abbreviation:pmsynrelm} show, that the proposed prototype in \cite{mashiro-performance-of-mpasynrm-with-ferrite-magnets-for-ev-hv-applications-considering-productivity} achieve close values of power density and an efficiency as rare-earth \gls{abbreviation:pmsm} counterpart, but with much lower costs \cite{haiwei-low-cost-ferrite-pm-assisted-synchronous-reluctance-machine-for-electric-vehicles}.\par
@@ -311,7 +322,7 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
             \label{fig:pmsynrelm-rotor-magnets-position}
     \end{figure}
 
-
+\FloatBarrier
 \section{Control}
 
     \subsection{Mathematical model}
@@ -410,7 +421,7 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
             \vspace*{1.5cm}
              \hspace*{-\parindent} \textbf{Maximum Torque Per Ampere (\gls{abbreviation:mtpa}) \gls{abbreviation:pmsynrelm} control}\par
                 \hspace*{\parindent} The main objective of the \gls{abbreviation:mtpa} strategy is to achieve the reference (desired) torque with minimum value of stator currents in $d$ and $q$-axis ($i_d$ and $i_q$). According to \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}, there are multiple methods how to realize the \gls{abbreviation:mtpa}.\par
-                The control strategy is parameter dependent. In \cite{niazi-robust-maximum-torque-per-ampere-control-of-pmsynrelm} authors present a robust online parameter estimation technique which improves the control strategy. With calculated and estimated parameters and measured stator currents the torque, which would the machine provide is calculated and then used as a reference value for further calculations. The proposed controller provides increased robustness againts the variations of motor parameters.
+                The control strategy is parameter dependent which may present a problem. In \cite{niazi-robust-maximum-torque-per-ampere-control-of-pmsynrelm} authors present a robust online parameter estimation technique which improves the control strategy. With calculated and estimated parameters and measured stator currents the torque, which would the machine provide is calculated and then used as a reference value for further calculations. The proposed controller provides increased robustness againts the variations of motor parameters.
 
             \vspace*{1.5cm}
              \hspace*{-\parindent} \textbf{Maximum Torque Per Voltage (\gls{abbreviation:mtpv}) \gls{abbreviation:pmsynrelm} control}\par
@@ -441,14 +452,11 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
 
         \par
         There are many researches regarding the control strategies which leverage the main idea of presented strategies and perfects them for the specific application. The example diagram depicting selected sub-control strategies is presented in \cite{heidari-a-review-of-synchronour-relucatence-motor-drive-advancements}.
-
 \section{Comparison to other machines}
     When designing electric drives there are options on which motor to use in the application. That is why the comprehensive comparison of \gls{abbreviation:pmsynrelm} and other types of motor is handy. This comparison study was well carried out in \cite{zhang-Comprehensive-Comparative-Study-on-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-and-Other-Types-of-Motor}. Authors compare the induction machine (\gls{abbreviation:im}), synchronous reluctance motor (\gls{abbreviation:synrelm}), permanent magnet assisted synchronous reluctaaance motor (\gls{abbreviation:pmsynrelm}) and interior permanent-magnet machine (\gls{abbreviation:ipm}).\par
     The machines are compared based on the design parameters regarding electromagnetic performance, material cost and temperature. The authors in \cite{zhang-Comprehensive-Comparative-Study-on-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-and-Other-Types-of-Motor} conclude, that the electromagnetic performance of analyzed ferrite-based \gls{abbreviation:pmsynrelm} are better than that of the \gls{abbreviation:im} and \gls{abbreviation:synrelm} without \gls{abbreviation:pm}. The cost of materials for \gls{abbreviation:pmsynrelm} is lower than the \gls{abbreviation:ipm}. The torque ripple and the demagnetization of ferrites may be a problem when using the \gls{abbreviation:pmsynrelm}. \cite{zhang-Comprehensive-Comparative-Study-on-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-and-Other-Types-of-Motor}
-\section{Usage}
-
 \section{Recent research interest}
-    Recent interest of research of \gls{abbreviation:pmsynrelm} has been focused on improving the overall performance, cost and behaviour of permanent magnet assisted machines.\bar
+    Recent interest of research of \gls{abbreviation:pmsynrelm} has been focused on improving the overall performance, cost and behaviour of permanent magnet assisted machines.\par
     The improvement was achieved:
         \begin{itemize}
         \item using non-rare earth materials such as ferrites,
@@ -456,12 +464,9 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
         \item analyzing rotor structure types and motor parameters based on the permanent magnet position.
         \end{itemize}
 
-    Some research focus on improving well known control strategies to achieve a better performance of the drive. When using ferrite based permanent magnets the main concern of these strategies is to minimize (or better eliminate) the possibility of a permanent demagnetization which could occur.
+    Some research focus on improving well known control strategies to achieve a better performance of the drive. When using ferrite based permanent magnets the main concern of these strategies is to minimize (or better eliminate) the possibility of a permanent demagnetization which could occur.\par
+    New types of motors and control strategies are proposed in \cite{ostovic-Memory-motors-a-new-class-of-controllable-flux-PM-machines-for-a-true-wide-speed-operation}. Proposed motors utilize variable flux strategy where high stator current $i_d$ value for a short amount of time may cause that the ferrite based permanent magnets are demagnetized. When the demagnetization is not needed the stator current $i_d$ may again cause magnetization of permanent magnets. The proposed principle is still being developed and published about.
 
-%% Conclusion %%
-\newpage
-\addcontentsline{toc}{section}{\numberline{}Conclusion} 
-\section*{Conclusion}
 
 \flushbottom % vyčištění stránky
 
@@ -485,7 +490,7 @@ It has been observed, that when inserting the \gls{abbreviation:pm} in the cente
 
 		\printglossary[type=abbreviationslist, style = myStyleAbbreviations]
 
-		\fbar
+		\FloatBarrier
 		%\newpage
 		\printglossary[type=symbolslist, style =  myStyleSymbols]
 
