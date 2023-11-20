@@ -278,7 +278,7 @@ This paper is organized as follows: Firstly the most used design of the stator a
 
 \section{Design}
 The (\gls{abbreviation:pmsynrelm}) is widely used for its significant advantages of small size, low losses, high efficiency, wide constant power range and better performance than general synchronous reluctance motors \gls{abbreviation:synrelm}. \cite{xinmin-design-of-permanent-magnet-assisted-synch-rel-m-with-low-torque-ripple,huynh-design-and-analysis-of-perm-as-synch-rel-m}
-    \subsection{Stator and Rotor}
+    \subsection{Stator}
         Numerous methodologies exist for connecting the stator winding. While research papers traditionally focus on standard Delta or Star winding configurations, the authors in \cite{ibrahim-an-improved-torque-density-synchronous-reluctance-machine-with-a-combined-star-delta-winding-layout, ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons} propose a novel configuration which elevates the torque performance without altering the stator current called the Star-Delta hybrid winding. The main idea of the hybrid Delta-Star connection is to split the standard phase wiring into two parts. The one part is for the Delta connection, the other for Star connection. Then the coils of wiring are connnected to series. Motors utilizing hybrid stator winding with \gls{abbreviation:pm}s inserted in the rotor flux bariers may exhibit constant power factor over 0.9. \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons}
 
         \begin{figure}[htbp!]
@@ -290,6 +290,36 @@ The (\gls{abbreviation:pmsynrelm}) is widely used for its significant advantages
 
         In \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons} the authors manufactured and proposed four prototypes of \gls{abbreviation:synrelm}. The prototypes consist of two stators, with either conventional star winding or hybrid star-delta winding, and two rotors, with ferrite permanent magnets or without. Maxwell transient simulations were carried out on the four prototypes, which were then manufactured and experiment on.\par
     According to \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons} the researches state, that when using the hybrid stator winding connection, the efficiency increase is rather low compared to efficiency increase when comparing \gls{abbreviation:synrelm} with and without \gls{abbreviation:pm}s, thus creating \gls{abbreviation:pmsynrelm}. This outcome raises a question: Is the utilization of the hybrid delta-star winding truly worthwhile?\par
+
+    \subsection{Rotor}
+    Rotor structure of \gls{abbreviation:pmsynrelm} is derived from the design of conventional \gls{abbreviation:synrelm} which has gone through years of evolution to achieve wide range of constant power and high power factor. There are two main types of rotor design: internal or external. In order to fulfill the requirements, the target is to design the rotor with minimum inductane in the $q$ axis ($\text{L}_q$) and maximum in $d$ axis ($\text{L}_d$). The saliency ratio defined in \cite{talebi-Design-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-Made-Easy} as a $\text{L}_d/\text{L}_q$ should be maximized. The required saliency ratio may be achieved by optimizing shape, placement and number of flux bariers. The bariers are in \gls{abbreviation:pmsynrelm} then filled with propper amount of \gls{abbreviation:pm}s made of rare earth materials or by ferrites. \cite{talebi-Design-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-Made-Easy}\par
+    In \cite{talebi-Design-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-Made-Easy} authors present mathematical model of \gls{abbreviation:pmsynrelm} with four flux barriers to propper calculate the motor flux density, inductances, back-\gls{abbreviation:emf} and developed torque. The proposed rotor designed is presented in Fig. \ref{fig:four-barrier-pmasyrelm}. There are not many papers regarding the external rotor design of \gls{abbreviation:pmsynrelm} structure available. The authors of \cite{bonthu-Design-of-permanent-magnet-assisted-synchronous-reluctance-motor-with-external-rotor-architecture} investigated the proposed structure and compared the internal and external architecture. The two compared architectures are depicted in Fig. \ref{fig:external-internal-rotor}. Usually the magnetic flux in design is analysed via Finite Element Method. The graphical analysis of the proposed four-pole \gls{abbreviation:pmsynrelm} from \cite{talebi-Design-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-Made-Easy} is depicted in Fig. \ref{fig:four-pole-rotor-fem}.
+
+
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.95\textwidth]{src/png/four-barrier-pmasyrelm.png}
+            \caption{Four barrier Permanent Magnet Assisted Synchronous Reluctance Motor rotor structure. \cite{talebi-Design-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-Made-Easy}}
+            \label{fig:four-barrier-pmasyrelm}
+        \end{figure}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\textwidth]{src/png/four-pole-rotor-fem.png}
+            \caption{Four barrier Permanent Magnet Assisted Synchronous Reluctance Motor Permanent Magnet Flux Density Analysis via Finite Element Method. \cite{talebi-Design-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-Made-Easy}}
+            \label{fig:four-pole-rotor-fem}
+        \end{figure}
+    \end{minipage}%
+
+    \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=0.8\textwidth]{src/png/external-internal-rotor.png}
+            \caption{Proposed (a) internal rotor structure, (b) external rotor structure. \cite{bonthu-Design-of-permanent-magnet-assisted-synchronous-reluctance-motor-with-external-rotor-architecture}}
+            \label{fig:external-internal-rotor}
+    \end{figure}
     \subsection{Magnets}
         \gls{abbreviation:pmsynrelm} are very often compared to Permanent Magnet Synchronous Motors (\gls{abbreviation:pmsm}) in terms of power, torque density, efficiency and costs. Both of the machine types are widely used in automotive field. Though the \gls{abbreviation:pmsm} are very popular \cite{morimoto-experimental-evaulation-of-a-rare-earth-free-pmasynrm-with-ferrite-magnets-for-automotive-applications}, the permanent magnets (\gls{abbreviation:pm}s) used in the conventional design are often made of rare-earth materials such as neodymium or dysprosium. That is the motivation why \gls{abbreviation:pmsynrelm} motors with rare-earth-free materials are now being the subject of many research studies. Experiments comparing the production-used \gls{abbreviation:pmsm} and the prototype \gls{abbreviation:pmsynrelm} show, that the proposed prototype in \cite{mashiro-performance-of-mpasynrm-with-ferrite-magnets-for-ev-hv-applications-considering-productivity} achieve close values of power density and an efficiency as rare-earth \gls{abbreviation:pmsm} counterpart, but with much lower costs \cite{haiwei-low-cost-ferrite-pm-assisted-synchronous-reluctance-machine-for-electric-vehicles}.\par
 it has been observed that strategically placing the \gls{abbreviation:pm}s at the center of the flux barrier forces magnetic flux lines to traverse through the flux barriers along the $q$-axis direction. This leads to reduction of a linked magnetic flux along the $q$-axis and therefore improvement of the output torque. \cite{ibrahim-permanent-magnet-assisted-synchronous-reluctance-motor-employing-a-hybrid-star-delta-winding-for-high-speed-applicaitons, ngo-performance-analysis-of-synchronous-reluctance-motor-with-limited-amount-of-permanent-magnet}\par
@@ -496,7 +526,7 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
 
 \begin{appendices}
 	\section{List of symbols and abbreviations}
-
+    \vspace*{0.25cm}
 		\printglossary[type=abbreviationslist, style = myStyleAbbreviations]
 
 		\FloatBarrier
