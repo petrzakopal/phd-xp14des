@@ -365,7 +365,7 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
             \underline{u}^k_1 = \text{R}_\text{s} \underline{i}^k_1 + \frac{\dd \underline{\psi}^k_1 }{\dd t} + j \omega_k \underline{\psi}^k_1.
         \end{equation}
 
-        Where $\underline{u}^k_1$ (V) is space vector of stator voltage, $R_\text{s}$ ($\Omega$) is stator rezistance, $\underline{i}^k_1$ (A) space vector of a stator current, $\underline{\psi}^k_1$ (Wb) space vector of a stator flux linkeage, $\omega_k$ (rad $\text{s}^{-1}$) general angular speed.\par
+        Where \gls{symbol:uk1} (V) is space vector of stator voltage, \gls{symbol:rs} ($\Omega$) is stator rezistance, \gls{symbol:ik1} (A) space vector of a stator current, \gls{symbol:psik1} (Wb) space vector of a stator flux linkeage, \gls{symbol:angularSpeed} (rad $\text{s}^{-1}$) general angular speed.\par
         The voltage equation denoted in $dq$-axis is as follows
 
         \begin{equation}\label{eq:stator-voltage-dq}
@@ -391,13 +391,13 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
             \psi_q = \text{L}_q i_\text{q} + \psi_\text{PM}.
         \end{equation}
 
-        Where $\text{L}_q$ (H), $\text{L}_d$ (H) are inductances in $d$-axis and $q$-axis respectively, $\psi_\text{PM}$ (Wb) is a flux linkeage of permanent magnets. Very often the \gls{abbreviation:pm} flux linkeage is oriented negatively in the $q$-axis when respecting the vector orientation the equation \ref{eq:q-axis-flux-linkeage-general} can be rewritten as
+        Where \gls{symbol:lq} (H), \gls{symbol:ld} (H) are inductances in $d$-axis and $q$-axis respectively, \gls{symbol:psiPM} (Wb) is a flux linkeage of permanent magnets. Very often the \gls{abbreviation:pm} flux linkeage is oriented negatively in the $q$-axis when respecting the vector orientation the equation \ref{eq:q-axis-flux-linkeage-general} can be rewritten as
 
         \begin{equation}\label{eq:q-axis-flux-linkeage-rewritten}
             \psi_q = \text{L}_q i_\text{q} - \psi_\text{PM}.
         \end{equation}
         
-        The general equation for electromagentic torque is then
+        The general equation for electromagnetic torque \gls{symbol:torque} (Nm) is then
 
         \begin{equation}\label{eq:torque-general}
             \begin{gathered}
@@ -405,14 +405,14 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
             \end{gathered}
         \end{equation}
 
-        where $\text{p}_\text{p}$ (-) is number of pole pairs.\par
+        where \gls{symbol:polePairs} (-) is number of pole pairs.\par
 
         After the substituion of \ref{eq:d-axis-flux-linkeage} and \ref{eq:q-axis-flux-linkeage-rewritten} to \ref{eq:torque-general} the torque euation may be rewritten as
 
 
         \begin{equation}\label{eq:torque-pmsynrelm}
             \begin{gathered}
-                M = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - (\text{L}_q i_q -\psi_\text{PM}) i_d) = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - \text{L}_q i_q i_d + \psi_\text{PM} i_d).
+                T = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - (\text{L}_q i_q -\psi_\text{PM}) i_d) = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - \text{L}_q i_q i_d + \psi_\text{PM} i_d).
             \end{gathered}
         \end{equation}
 
