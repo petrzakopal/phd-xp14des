@@ -144,8 +144,6 @@
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}control strategies based on known principles}}\par
         \vspace*{0.5cm}
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}may use relatively simple mathematical model for control}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctublue}PMSynRelM}}
 	}
 	\frame{
 	    \frametitle{Design}
@@ -174,4 +172,30 @@
         \techbluetitle{Rotor}
 	}
 
+	\frame{
+	    \frametitle{Rotor Design}
+            \begin{itemize}
+                \item internal/external
+                \item power factor/wide power range => saliency ratio ($L_d/L_q$)
+                \item shape/placement/number of flux bariers
+                \item magnets - rare earth (with neodymium/dysprosium), non-rare earth (ferrites)
+            \end{itemize}
+
+            \begin{figure}[H]
+                \centering
+                    \includegraphics[width=0.75\textwidth]{./../tex/src/png/external-internal-rotor.png} 
+            \end{figure}
+	}
+	\frame{
+	    \frametitle{Magnets}
+            \begin{itemize}
+                \item embedded along the flux barriers, facing the $q$-axis (a) (improvement of torque)
+                \item crossing the flux barriers, facing the $d$-axis (b)
+            \end{itemize}
+
+            \begin{figure}[H]
+                \centering
+                    \includegraphics[width=0.75\textwidth]{./../tex/src/png/pmsynrelm-rotor-magnets-position.png} 
+            \end{figure}
+	}
 \end{document}
