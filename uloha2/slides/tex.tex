@@ -73,13 +73,14 @@
 		\frametitle{Table of contents}
         %\vspace*{-2cm}
         %\techbluetitle{Structure of the report}
-         {\fontsize{16pt}{16pt}\technikaregular {\color{ctublue}Structure of the report}}
+         {\fontsize{16pt}{16pt}\technikaregular {\color{ctublue}Structure of the report:}}
         %\vspace*{1.8cm}
         \begin{itemize}
-            \item Introduction            \item Design
-            \item Control
-            \item Comparison to other machines
-            \item Recent research interest   
+            \item Introduction,
+            \item Design,
+            \item Control,
+            \item Comparison to other machines,
+            \item Recent research interest.
         \end{itemize}
 	}
 	\frame{
@@ -92,8 +93,6 @@
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}control strategies based on known principles}}\par
         \vspace*{0.5cm}
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}may use relatively simple mathematical model for control}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}PMSynRelM}}
 	}
 	\frame{
 		\frametitle{Introduction}
@@ -105,8 +104,6 @@
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}control strategies based on known principles}}\par
         \vspace*{0.5cm}
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}may use relatively simple mathematical model for control}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}PMSynRelM}}
 	}
 	\frame{
 		\frametitle{Introduction}
@@ -118,8 +115,6 @@
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctublue}control strategies based on known principles}}\par
         \vspace*{0.5cm}
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}may use relatively simple mathematical model for control}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}PMSynRelM}}
 	}
 	\frame{
 		\frametitle{Introduction}
@@ -131,19 +126,6 @@
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}control strategies based on known principles}}\par
         \vspace*{0.5cm}
         {\fontsize{14pt}{14pt}\technikaregular {\color{ctublue}may use relatively simple mathematical model for control}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}PMSynRelM}}
-	}
-	\frame{
-		\frametitle{Introduction}
-
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}PMSynRelM}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}actively used in automotive and traction aplications}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}control strategies based on known principles}}\par
-        \vspace*{0.5cm}
-        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}may use relatively simple mathematical model for control}}\par
 	}
 	\frame{
 	    \frametitle{Design}
@@ -165,6 +147,7 @@
                     \includegraphics[width=0.75\textwidth]{./../tex/src/pdf/hybrid-star-delta-wiring.pdf} 
             \end{figure}
         \end{minipage}
+	
 
 	}
 	\frame{
@@ -185,6 +168,8 @@
                 \centering
                     \includegraphics[width=0.75\textwidth]{./../tex/src/png/external-internal-rotor.png} 
             \end{figure}
+            
+        {\parbox{\linewidth}{\tiny{\color{ctugrey}{BONTHU, Sai Sudheer Reddy; CHOI, Seungdeog; GORGANI, Aida; JANG, Kibong. Design of permanent magnet assisted synchronous reluctance motor with external rotor architecture. In: 2015 IEEE In- ternational Electric Machines \& Drives Conference (IEMDC). Coeur d’Alene, ID: IEEE, 05/2015, pp. 220–226. ISBN 978-1-4799-7941-7. Available from DOI: 10.1109/IEMDC.2015.7409063.}}}}
 	}
 	\frame{
 	    \frametitle{Magnets}
@@ -197,5 +182,53 @@
                 \centering
                     \includegraphics[width=0.75\textwidth]{./../tex/src/png/pmsynrelm-rotor-magnets-position.png} 
             \end{figure}
+
+        {\parbox{\linewidth}{\tiny{\color{ctugrey}{NGO; HSIEH. Performance Analysis of Synchronous Reluctance Motor with Limited Amount of Permanent Magnet. Energies. 09/2019, roč. 12, č. 18, p. 3504. ISSN 1996-1073. Available from DOI: 10.3390/en12183504.}}}}
+	}
+	\frame{
+	    \frametitle{Control}
+        \techbluetitle{Control}
+	}
+	\frame{
+	    \frametitle{Control}
+            \begin{figure}[H]
+                \centering
+                    \includegraphics[width=0.75\textwidth]{./../tex/src/png/pmsynrelm-control-strategies.png} 
+            \end{figure}
+	}
+	\frame{
+	    \frametitle{Control}
+        \vspace*{-1cm}
+            \begin{figure}[H]
+                \centering
+                    \includegraphics[width=0.75\textwidth]{./../tex/src/pdf/cad-pmasynrm-vector-diagram.pdf} 
+            \end{figure}
+        \begin{equation}\label{eq:torque-general}
+            \begin{gathered}
+                T = \frac{3}{2} \text{p}_\text{p} | \underline{\psi_{dq}} \times \underline{i_{dq}} | = \frac{3}{2} \text{p}_\text{p} (\psi_d i_q - \psi_q i_d).
+            \end{gathered}
+        \end{equation}
+        \begin{equation}
+            \begin{gathered}
+                T = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - (\text{L}_q i_q -\psi_\text{PM}) i_d) = \frac{3}{2} \text{p}_\text{p} (\text{L}_d i_d i_q - \text{L}_q i_q i_d + \psi_\text{PM} i_d).
+            \end{gathered}
+        \end{equation}
+	}
+	\frame{
+	    \frametitle{Recent research interest}
+        {\fontsize{14pt}{14pt}\technikaregular {\color{ctugrey}Recent improvement was achieved:}}\par
+
+        \begin{itemize}
+            \item by using non-rare earth materials such as ferrites,
+            \item by using novel hybrid stator winding structures,
+            \item by analyzing rotor structure types and motor parameters based on the permanent magnet position
+and perfecting the design for the specific application,
+            \item improving control strategies,
+            \item variable flux motor (strategy).
+        \end{itemize}
+	}
+	\frame{
+	    \frametitle{XP14DES}
+        \techbluetitle{Thank you for your attention.}
 	}
 \end{document}
