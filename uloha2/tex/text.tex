@@ -361,13 +361,81 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
 \end{figure}
 
 \FloatBarrier
+
+%% THIS IS A NEW PART FOR ULOHA2 PART 2
+\subsubsection{Effects of permanent magnet positioning on motor performance}
+Authors in \cite{ngo-performance-analysis-of-synchronous-reluctance-motor-with-limited-amount-of-permanent-magnet} studied effects of various \gls{abbreviation:pm} positioning on the torque performance, torque-speed curves and demagnetization. The analysed rotor structures are depicted in the Fig. \ref{fig:pm-positioning-analysed-motor-types}.
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/pm-positioning-analysed-motor-types.png}
+            \caption{Analysed rotor structures. \cite{ngo-performance-analysis-of-synchronous-reluctance-motor-with-limited-amount-of-permanent-magnet}}
+            \label{fig:pm-positioning-analysed-motor-types}
+    \end{figure}
+    The authors state, that the \gls{abbreviation:pm} position has a impact on inductances of the machine which apart from stator inductances consider \gls{abbreviation:pm} flux, thus named $L_{\text{dm}}$ and $L_{\text{qm}}$. The \gls{abbreviation:pm} position in models (d), (e), (f) has a great impact on the $L_{\text{dm}}$. The lowest inductance may be observed for model (e) because of the \gls{abbreviation:pm} flux which limits the armature flux linkeage. The inductance $L_{\text{qm}}$ is by authors similar for models (d), (e), (f). The inductance $L_{\text{dm}}$ is the highest for model (c). In \cite{ngo-performance-analysis-of-synchronous-reluctance-motor-with-limited-amount-of-permanent-magnet} the authors also investigated the effect of a stator current magnitude on the inductance in.\par
+    While the authors were investigating the effects on torque they found out that the torque for models (a), (b), (c) is almost similar. From the presented models, the model (c) and (a) achieve the highest torque values for the same stator current amplitude. This statement is confirmed by models.\par
+    The figures Fig. \ref{fig:pm-positioning-torque-speed-curves} and Fig. \ref{fig:pm-positioning-torque-speed-curves-2} depict a torque-speed and power-speed curves of analysed rotor structures for models (c) and (a) from the preceeding figure. (named as Model 3 and Model 1 respectively) As can be seen the curves tend to converge and overlap at higher speed values. The torque and power values for the model (a) are slightly lower in the whole analysed speed range. When comparing the model (c) and (e) at the low speed operation, the torque of model (e) is still higher but when the speed increases, thus the stator current decreases because of field weakening, the power-speed curves for model (e) are enhanced. But when the speed increses and stator current still decreases, the model (e) cannot maintain its superiority and curves of model (c) surpass the (e) curves. \cite{ngo-performance-analysis-of-synchronous-reluctance-motor-with-limited-amount-of-permanent-magnet}
+    From the previous conclusions it can be determined, that the specific operation point must be analyzed for the best \gls{abbreviation:pm} to be determined. In some operating points the partial shift of \gls{abbreviation:pm}s position to the $d$-axis may increase the power performance and constant power speed range of the machine.
+
+    \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/pm-positioning-torque-speed-curves.png}
+            \caption{Analysed torque-speed and power-speed curves of presented rotor structures (a) and (c) with different stator currents. \cite{ngo-performance-analysis-of-synchronous-reluctance-motor-with-limited-amount-of-permanent-magnet}}
+            \label{fig:pm-positioning-torque-speed-curves}
+    \end{figure}
+
+    \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/pm-positioning-torque-speed-curves-2.png}
+            \caption{Analysed torque-speed and power-speed curves of presented rotor structures (c) and (e) with different stator currents. \cite{ngo-performance-analysis-of-synchronous-reluctance-motor-with-limited-amount-of-permanent-magnet}}
+            \label{fig:pm-positioning-torque-speed-curves-2}
+    \end{figure}
+
+\subsubsection{Effects of flux barrier shape on torque ripple}
+
+
+    Authors in \cite{bianchi-Experimental-comparison-of-PM-assisted-synchronous-reluctance-motors} present various strategies on how to reduce the torque ripple in \gls{abbreviation:pmsynrelm}. One possibility how to reduce the ripple is to utilize the asymmetric rotor flux barriers. To compensate the ripple caused by the torque harmonics the flux barriers are slightly shifted or they adopt two different geometries in the same rotor structure. The resulting rotor structure is by authors refered to as a "machaon" type.\par
+    One type of presented "machaon" rotor structure is depicted in Fig. \ref{fig:asymmetrical-rotor-flux-barriers} (c).\par
+    The position of \gls{abbreviation:pm}s in the flux barrier is the same for all corresponding sections of the rotor structure, only the lateral part of barriers and ending angles differ. The small modifications of the design have impact on torque harmonics which are higher than fundamental. Thus only small variations in design are needed to inflict a change in the torque ripple. \cite{bianchi-Experimental-comparison-of-PM-assisted-synchronous-reluctance-motors}\par
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\textwidth]{src/png/asymmetrical-rotor-flux-barriers.png}
+            \caption{Different geometries of rotors, symmetric type A~(a), symmetric type B (b), asymmetric (c). \cite{bianchi-Experimental-comparison-of-PM-assisted-synchronous-reluctance-motors}}
+            \label{fig:asymmetrical-rotor-flux-barriers}
+        \end{figure}
+    \end{minipage}%
+    \hspace{0.05\linewidth}
+    \begin{minipage}[t]{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{src/png/torque-rotor-position-asymmetric-motor.png}
+            \caption{Torque behaviour of symmetric A~(a), symmetric B (b) and asymmetric (c) rotors dependent on the rotor angle. \cite{bianchi-Experimental-comparison-of-PM-assisted-synchronous-reluctance-motors}}
+            \label{fig:torque-rotor-position-asymmetric-motor}
+        \end{figure}
+    \end{minipage}%
+    \FloatBarrier
+    
+    \vspace*{0.75cm}
+    According to the \cite{bianchi-Experimental-comparison-of-PM-assisted-synchronous-reluctance-motors} authors, both of the motors with symmetric rotors from Fig. \ref{fig:asymmetrical-rotor-flux-barriers} exhibit torque harmonics of 18th order with almost the same amplitude but shifted nearly for $\pi$ radians. So when the structures are combined, the "machaon" rotor type is achieved and the 18th torque harmonics is seamingly removed. However the 36th order torque harmonics with lower amplitude caused by the torque combination of symmetric rotor types is then more evident. The authors state that the average torque value exhibits minimal variation and remains nearly same for every rotor angle position. The torque-rotor position dependency chart for symmetric rotor type~A~(a), symmetric rotor type~B~(b) and asymmetric rotor type~(c) is depicted in Fig. \ref{fig:torque-rotor-position-asymmetric-motor}.
+
+    \par
+    Numerous research studies were conducted to investigate and minimize the torque ripple. Authors of~\cite{sanada-Torque-ripple-improvement-for-synchronous-reluctance-motor-using-asymmetric-flux-barrier-arrangement} in their paper present photographs of experimental machines which were used to analyze the effects of usage of an asymmetric rotor on torque ripple. The photographs are depicted in Fig. \ref{fig:asymmetrical-rotor-experimental-photos}.
+
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=0.55\textwidth]{src/png/asymmetrical-rotor-experimental-photos.png}
+            \caption{Photographs of experimental symmetric (a) and asymmetric (b) rotor structures used by authors of \cite{sanada-Torque-ripple-improvement-for-synchronous-reluctance-motor-using-asymmetric-flux-barrier-arrangement} to analyze the effects of an asymmetrical rotor structures on a torque ripple.}
+            \label{fig:asymmetrical-rotor-experimental-photos}
+        \end{figure}
+
+\FloatBarrier
 %\newpage
 \section{Control}
 
     \subsection{Mathematical model}
         The stator voltage equation of \gls{abbreviation:pmsynrelm} denoted in the general axis $k$ may be written as follows
 
-        \begin{equation}
+        \begin{equation}\label{eq:voltage-equation}
             \underline{u}^k_1 = \text{R}_\text{s} \underline{i}^k_1 + \frac{\dd \underline{\psi}^k_1 }{\dd t} + j \omega_k \underline{\psi}^k_1.
         \end{equation}
 
@@ -435,16 +503,50 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
     
     \par
 
+    When modelling the \gls{abbreviation:pmsynrelm} in simulation software such as MATLAB/Simulink it is very convinient to utilize the state-space representation of presented equations. The general \gls{abbreviation:pmsynrelm} mathematical model is presented in \cite{sriprang-Design-Modeling-and-Model-Free-Control-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motor-for-e-Vehicle-Applications}. The state-space equations for the linkeage flux \gls{symbol:psiPM} of \gls{abbreviation:pm}s aligned with $q$-axis may be written as follows:
+
+    \begin{equation}\label{eq:mathematical-model-pmsynrelm}
+     \begin{bmatrix}
+        \frac{\dd i_d}{\dd t} \\
+         \frac{\dd i_q}{\dd t}
+     \end{bmatrix}
+        =
+     \begin{bmatrix}
+         - \frac{R_\mathrm{s}}{L_d}i_d + \frac{\omega_1}{L_d}(L_q i_q - \psi_\mathrm{PM})\\
+         - \frac{\omega_1 L_d}{L_q} - \frac{R_s}{L_q} i_q
+     \end{bmatrix}
+        +
+     \begin{bmatrix}
+        \frac{1}{L_d} & 0\\
+         0 & \frac{1}{L_q}
+     \end{bmatrix}
+     \begin{bmatrix}
+         u_{1d}\\
+         u_{1q}
+     \end{bmatrix}.
+    \end{equation}
+    It is convinient to include the torque equation \ref{eq:torque-pmsynrelm} to the model as
+
+    \begin{equation}
+        T = \frac{3}{2} p_\mathrm{p} i_d \left[ i_q (L_d - L_q) + \psi_{\mathrm{PM}} \right].
+    \end{equation}
+
+    
+    \par
+
+    The formulation of the state-space representation primarily originates from the stator voltage equation, as expressed in Eq. \ref{eq:voltage-equation}.
+
     \subsection{Control strategies}
 
         Numerous options exist for controlling the \gls{abbreviation:pmsynrelm}. The principles may be broadly categorized into two major groups: \textbf{Scalar Control} and \textbf{Vector Control}. The primary subcategories of vector control strategies are \textbf{Field Oriented Control} (\gls{abbreviation:foc}) and \textbf{Direct Torque Control} (\gls{abbreviation:dtc}). These strategies use a different approach to minimize the torque ripple and to achive desirable high dynamic performance. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive} The general group decopmosition is depicted in Fig. \ref{fig:pmsynrelm-control-strategies}.
 
         \begin{figure}[htbp!]
             \centering
-            \includegraphics[width=0.63\textwidth]{src/png/pmsynrelm-control-strategies.png}
+            \includegraphics[width=0.75\textwidth]{src/png/pmsynrelm-control-strategies.png}
             \caption{General diagram depicting major groups of control strategies for \gls{abbreviation:pmsynrelm}. Graph inspired by \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}}
             \label{fig:pmsynrelm-control-strategies}
         \end{figure}
+
 
         \subsubsection{Scalar Control}
             Executing scalar drive control is relatively straighforward solution, it does not necesitate the use of high performance Digital Signal Processors (\gls{abbreviation:dsp}s). However Scalar Control does not provide the great dynamic performance and speed provided by \gls{abbreviation:foc} and \gls{abbreviation:dtc}. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}\par
@@ -459,16 +561,17 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
              \hspace*{-\parindent} \textbf{Maximum Torque Per Ampere (\gls{abbreviation:mtpa}) \gls{abbreviation:pmsynrelm} control}\par
                 \hspace*{\parindent} The main objective of the strategy is to achieve the reference torque using minimum value of stator current $i_d$ and $i_q$. According to \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}, there are numerous methods how to realize the \gls{abbreviation:mtpa}.\par
                 The control strategy is parameter dependent which may present a problem. In \cite{niazi-robust-maximum-torque-per-ampere-control-of-pmsynrelm} authors present a robust online parameter estimation technique which improves the general \gls{abbreviation:mtpa} control strategy. Using calculated and estimated parameters together with measured stator currents the machine torque is calculated and then used as a reference value for further calculations. The proposed controller stands out for its increased robustness againts the variations of motor parameters.
-            
-            \newpage
-            %\vspace*{1.5cm}
+                \par
+                Authors in \cite{sriprang-Design-Modeling-and-Model-Free-Control-of-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motor-for-e-Vehicle-Applications} present a model-free \gls{abbreviation:mtpa} control of the \gls{abbreviation:pmsynrelm}. The motor is modelled with equations presented in this section. The authors modelled the control and motor part in MATLAB and then performed the experimentation measuring using 1 kW motor. The motor parameters are present in the cited paper. The model-free approach is best for complex systems, where the control strategies are parameter dependet or there are not enough known parameters of controlled system. Authors then conclude that their presented model-free control algorithm tracks the reference values well and is suitable for controlling the machine.In terms of performance the proposed model-free control technique surpassed the \gls{abbreviation:foc} with traditional proportional-integral controllers. Similar approach was taken to improve the control strategies for \gls{abbreviation:pmsm} \cite{wang-Modulated-Model-Free-Predictive-Control-With-Minimum-Switching-Losses-for-PMSM-Drive-System} and \gls{abbreviation:synrelm} \cite{lin-A-Modulated-Model-Free-Predictive-Current-Control-for-Four-Switch-Three-Phase-Inverter-Fed-SynRM-Drive-Systems} drives.
+
+            \vspace*{1.5cm}
              \hspace*{-\parindent} \textbf{Maximum Torque Per Voltage (\gls{abbreviation:mtpv}) \gls{abbreviation:pmsynrelm} control}\par
                 \hspace*{\parindent} The higher the rotor angular speed, the larger the magnitude of the back electromotive force (\gls{abbreviation:emf}), the larger voltage magnitude supplied from source is needed for machine to work correctly. When rotor speed reaches the value where back \gls{abbreviation:emf} is so high that the higher supply voltage than the nominal is required then the current flowing through stator wires decreases. This is due to the back \gls{abbreviation:emf} and inability to highten the supply voltage above the nominal. Thus the voltage value restricts the current based on the rotor speed. In \cite{sanz-analitical-maximum-torque-per-volt-control-strategu-of-an-interior-permanent-magnet-synchronous-motor-with-very-low-battery-voltage} the exemplar curves presenting \gls{abbreviation:mtpv} are depicted. Another mathematical expression of the \gls{abbreviation:mtpv} trajectory is presented in \cite{fletcher-operation-along-the-maximum-torque-per-voltage-trajectory-in-a-direct-torque-and-flux-controlled-interior-permament-magnet-synchronous-motor}. Cited paper also depicts the exemplar trajectories in the $i_d$-$i_q$ plane.
                 \par
                 The \gls{abbreviation:mtpv} trajectories are plotted in the $i_d$-$i_q$ plane. The trajectories correspond to the operation points where the possible torque is at the peak value. Thus the maximum torque value depends on the operational rotor speed.
 
-
-            \vspace*{1.5cm}
+            \newpage
+            %\vspace*{1.5cm}
              \hspace*{-\parindent} \textbf{Unity Power Factor Control (\gls{abbreviation:upfc})}\par
              \hspace*{\parindent} In various applications, it is required for the machine to operate with the highest power factor possible. Achieving a unity power factor is preferable to eliminate the consumption of reactive power. In \cite{moussa-unity-power-factor-control-of-permanent-magnet-motor-drive-system} two methods for achieving the highest value of power factor are proposed: \textit{1) controlling the $d$-axis stator current $i_d$} and \textit{2) controling the angle of stator current space vector $\underline{i_\text{stator}}$}.\par
              According to \cite{moussa-unity-power-factor-control-of-permanent-magnet-motor-drive-system} the \gls{abbreviation:upfc} allows wider speed range with constant torque value. This results in a higher output power of the drive.\par
@@ -484,9 +587,7 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
         \subsubsection{Direct Torque Control}
             Compared to vector control the \gls{abbreviation:dtc} is in fact simpler. It does not require the Pulse Width Modulation (\gls{abbreviation:pwm}) techniques. During the sample periode of \gls{abbreviation:dsp} only one space vector of supply voltage is provided as an output from the inverter. The calculation and control is done in the stationary reference frame (eg. stator linked frame in $\alpha \beta$ axis system).
 
-            
-            \newpage
-            %\vspace*{1.5cm}
+            \vspace*{1.5cm}
              \hspace*{-\parindent} \textbf{Hysteresis based \gls{abbreviation:dtc}}\par
             \hspace*{\parindent} Hysteresis based \gls{abbreviation:dtc} uses the principle of keeping the values of torque and magnetic flux (independently) in the hysteresis band of allowed values. Hysteresis based \gls{abbreviation:dtc} needs only a portion of paramaters which are necessary for vector control strategies, thus making the method very elegant and convinient. \cite{dwivedi-review-on-control-strategies-of-permanent-magnet-assisted-synchronous-reluctance-motor-drive}\par
 
@@ -495,15 +596,26 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
              \hspace*{-\parindent} \textbf{\gls{abbreviation:dtc} Space Vector Modulation (\gls{abbreviation:svm})}\par
             \hspace*{\parindent} \gls{abbreviation:dtc} Space Vector Modulation (\gls{abbreviation:svm}) utilizes general \gls{abbreviation:dtc} strategy but instead of hysteresis controllers the proportional-integral regulators with predictive controllers are used. Strategy proposed in \cite{swierczynski-dsp-based-direct-torque-control-of-permanent-magnet-synchronous-motor-using-space-vector-modulation-dtcsvm} shows that for Permanent Magnet Synchronous Motor the \gls{abbreviation:dtc}-\gls{abbreviation:svm} results in lower torque ripple and better harmonic composition of stator current than conventional \gls{abbreviation:dtc}.
 
+        
+        \newpage
         \subsubsection{Direct Self Control}
             Direct Self Control \gls{abbreviation:dsc} is very similar to the \gls{abbreviation:dtc} strategy, which was published by Takahashi in \cite{takahashi-high-performance-direct-torque-control-of-an-iduction-motor} in 1989 for induction motor. The \gls{abbreviation:dsc} strategy was published by Depenbrock in \cite{depenbrock-direct-self-control-of-inverter-fed-induction-machine}. In the proposed strategy the voltage space vectors follow the hexagonal path. In comparision \gls{abbreviation:dsc} strategy generaly requires lower switching frequency of the components than the \gls{abbreviation:dtc}.
 
         \subsubsection{Other strategies}
-            Numerous research papers have been published regarding the control strategies which leverage the fundamental principe of the general strategies and refines them for the specific application. The example diagram depicting some popular derived strategies is presented in \cite{heidari-a-review-of-synchronour-relucatence-motor-drive-advancements}.
+            Numerous research papers have been published regarding the control strategies which leverage the fundamental principe of the general strategies and refines them for the specific application. The example diagram depicting some popular derived strategies of general \gls{abbreviation:synrelm} is presented in Fig. \ref{fig:control-strategies-diagram} \cite{heidari-a-review-of-synchronour-relucatence-motor-drive-advancements}.
+
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=0.70\textwidth]{src/png/control-strategies-diagram.png}
+            \caption{Control strategies used for Synchronous Reluctance Motors (\gls{abbreviation:synrelm}). \cite{heidari-a-review-of-synchronour-relucatence-motor-drive-advancements}}
+            \label{fig:control-strategies-diagram}
+        \end{figure}
 
 \section{Comparison to other machines}
     When designing electric drives there are numerous options on which motor to use in the designed application. A~comprehensive comparation study was well carried out in \cite{zhang-Comprehensive-Comparative-Study-on-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-and-Other-Types-of-Motor}. Authors compare the induction machine (\gls{abbreviation:im}), synchronous reluctance motor (\gls{abbreviation:synrelm}), permanent magnet assisted synchronous reluctance motor (\gls{abbreviation:pmsynrelm}) and interior permanent-magnet machine (\gls{abbreviation:ipm}).\par
     The machines are compared based on the design parameters regarding their electromagnetic performance, material cost and temperature. The authors in \cite{zhang-Comprehensive-Comparative-Study-on-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-and-Other-Types-of-Motor} conclude, that the electromagnetic performance of analyzed ferrite-based \gls{abbreviation:pmsynrelm} is better than that of the \gls{abbreviation:im} and \gls{abbreviation:synrelm} which does not use in their design any \gls{abbreviation:pm}s. The cost of used materials for \gls{abbreviation:pmsynrelm} is lower than for the \gls{abbreviation:ipm}. But the torque ripple and the demagnetization of ferrites may be a problem when using the \gls{abbreviation:pmsynrelm}. \cite{zhang-Comprehensive-Comparative-Study-on-Permanent-Magnet-Assisted-Synchronous-Reluctance-Motors-and-Other-Types-of-Motor}
+
+\newpage
 \section{Recent research interest}
     In recent years the research of \gls{abbreviation:pmsynrelm} has been focused on improving the overall performance, cost and behaviour of permanent magnet assisted machines.\par
     The improvement was achieved:
@@ -513,7 +625,6 @@ Possible placement of \gls{abbreviation:pm}s in the rotor structure of \gls{abbr
         \item by analyzing rotor structure types and motor parameters based on the permanent magnet position and perfecting the design for the specific application.
         \end{itemize}
 
-    \newpage
     Some research articles focus on improving well known control strategies to achieve better performance of the drive. When using ferrite based permanent magnets the main concern of the applied control strategies is to minimize (better eliminate) the possibility of a permanent demagnetization which could occur.\par
     New types of motors and control strategies are proposed in \cite{ostovic-Memory-motors-a-new-class-of-controllable-flux-PM-machines-for-a-true-wide-speed-operation}. Proposed motors utilize variable flux strategy where high magnitude of stator current $i_d$ for a short amount of time may cause that the ferrite based permanent magnets are demagnetized. When the demagnetization is not needed the stator current $i_d$ may cause the re-magnetization of permanent magnets. The proposed principle is still being developed and published about.
 
